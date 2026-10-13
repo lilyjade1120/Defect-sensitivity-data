@@ -1,0 +1,15 @@
+coords-type cartesian
+ion-species GBRV/$ID_pbe.uspp
+include totalE.ionpos
+include totalE.lattice
+elec-cutoff 25 155
+elec-ex-corr gga-pbe
+elec-smearing Fermi 0.01
+latt-move-scale 1 1 0
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+
+include bandstruct.kpoints         #Get kpoints along high-symmetry path created above
+fix-electron-density totalE.$VAR   #Fix the electron density (not self-consistent)
+dump End BandEigs                  #Output the band eigenvalues for plotting
+dump-name bandstruct.$VAR          #This prefix should match the final paramater given to bandstructKpoints

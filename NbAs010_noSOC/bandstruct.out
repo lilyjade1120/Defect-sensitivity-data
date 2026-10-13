@@ -1,0 +1,653 @@
+
+*************** JDFTx 1.7.0 (git hash 19647f2f) ***************
+
+Start date and time: Wed May  6 13:42:45 2026
+Executable jdftx_gpu with command-line: -i bandstruct.in
+Running on hosts (process indices):  dcs131 (0-5)  dcs132 (6-11)  dcs134 (12-17)  dcs135 (18-23)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)  4 (4)  5 (5)  6 (6)  7 (7)  8 (8)  9 (9)  10 (10)  11 (11)  12 (12)  13 (13)  14 (14)  15 (15)  16 (16)  17 (17)  18 (18)  19 (19)  20 (20)  21 (21)  22 (22)  23 (23)
+gpuInit: Found compatible cuda device 0 'Tesla V100-SXM2-32GB'
+gpuInit: Found compatible cuda device 1 'Tesla V100-SXM2-32GB'
+gpuInit: Found compatible cuda device 2 'Tesla V100-SXM2-32GB'
+gpuInit: Found compatible cuda device 3 'Tesla V100-SXM2-32GB'
+gpuInit: Found compatible cuda device 4 'Tesla V100-SXM2-32GB'
+gpuInit: Found compatible cuda device 5 'Tesla V100-SXM2-32GB'
+gpuInit: Selected device 0
+Resource initialization completed at t[s]:      1.95
+Run totals: 24 processes, 24 threads, 24 GPUs
+Allocation cache: target size: 30000 MB (per process), margin: 0.5
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Cartesian
+core-overlap-check vector
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+davidson-band-ratio 1.1
+dump End BandEigs
+dump-name bandstruct.$VAR
+elec-cutoff 25 155
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+elec-smearing Fermi 0.01
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	convergeAll          no \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	abortOnFailedStep    no \
+	fdTest               no
+exchange-regularization WignerSeitzTruncated
+fix-electron-density totalE.$VAR
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	convergeAll          no \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	abortOnFailedStep    no \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+ion Nb   3.286430261638761   0.290440703003682 -27.693748748902422 1
+ion Nb   0.000000000000000   4.940987193684945 -27.707679830900915 1
+ion Nb   0.000000000000000  11.236796613316100 -24.773303062625327 1
+ion Nb   3.286430261638761  16.763855122291623 -24.867253225816867 1
+ion Nb   3.286430261638761  -0.107666753280548 -21.179200562453243 1
+ion Nb   0.000000000000000   5.625255631488822 -21.373006774499927 1
+ion Nb   0.000000000000000  11.198662599034627 -18.139488665328500 1
+ion Nb   3.286430261638761  16.714621250218173 -18.104420173145034 1
+ion Nb   3.286430261638761   0.011716523679047 -14.752983921572941 1
+ion Nb   0.000000000000000   5.622392839006327 -14.779909911660750 1
+ion Nb   0.000000000000000  11.175625146069260 -11.515748028722451 1
+ion Nb   3.286430261638761  16.741590027812954 -11.521718280329544 1
+ion Nb   3.286430261638761   0.014221041760156  -8.211232936972273 1
+ion Nb   0.000000000000000   5.597742766601229  -8.206500441968858 1
+ion Nb   0.000000000000000  11.169907210596801  -4.935067895748021 1
+ion Nb   3.286430261638761  16.743920011336122  -4.936071092900938 1
+ion Nb   3.286430261638761   0.012323427071531  -1.639391331381426 1
+ion Nb   0.000000000000000   5.589383572959979  -1.638384446168754 1
+ion Nb   0.000000000000000  11.165723228333951   1.639391331381426 1
+ion Nb   3.286430261638761  16.742783374222402   1.638384446168754 1
+ion Nb   3.286430261638761   0.016507409334384   4.935067895748021 1
+ion Nb   0.000000000000000   5.590520210073706   4.936071092900938 1
+ion Nb   0.000000000000000  11.167620843022572   8.211232936972273 1
+ion Nb   3.286430261638761  16.751142567863646   8.206500441968858 1
+ion Nb   3.286430261638761   0.022225344806844  11.515748028722451 1
+ion Nb   0.000000000000000   5.588190226550537  11.521718280329544 1
+ion Nb   0.000000000000000  11.165116324941465  14.752983921572941 1
+ion Nb   3.286430261638761  16.775792640268737  14.779909911660750 1
+ion Nb   3.286430261638761   0.045262797772210  18.139488665328500 1
+ion Nb   0.000000000000000   5.561221448955754  18.104420173145034 1
+ion Nb   0.000000000000000  11.045733047981871  21.179200562453243 1
+ion Nb   3.286430261638761  16.778655432751243  21.373006774499927 1
+ion Nb   3.286430261638761   0.083396812053689  24.773303062625327 1
+ion Nb   0.000000000000000   5.610455321029208  24.867253225816867 1
+ion Nb   0.000000000000000  11.443840504266101  27.693748748902422 1
+ion Nb   3.286430261638761  16.094386994947367  27.707679830900915 1
+ion As   3.286430261638761  13.100124327537729 -28.087137209892614 1
+ion As   0.000000000000000  18.904925201292642 -28.046352451350270 1
+ion As   0.000000000000000   1.681808839477923 -24.344018746306773 1
+ion As   3.286430261638761   7.361304627010034 -24.849679371704706 1
+ion As   3.286430261638761  13.022635147677999 -21.462735334663176 1
+ion As   0.000000000000000  18.458895251866217 -21.416763424322550 1
+ion As   0.000000000000000   1.878104964341938 -18.018002372819968 1
+ion As   3.286430261638761   7.449071436715001 -18.097919163689426 1
+ion As   3.286430261638761  12.988988422993190 -14.810741729054016 1
+ion As   0.000000000000000  18.571996409233808 -14.808836104041312 1
+ion As   0.000000000000000   1.860106600555094 -11.490986326517335 1
+ion As   3.286430261638761   7.433490007000076 -11.492542964486463 1
+ion As   3.286430261638761  13.001374438428465  -8.223687334926218 1
+ion As   0.000000000000000  18.574008040467788  -8.227475366938572 1
+ion As   0.000000000000000   1.844379164702465  -4.926433974794211 1
+ion As   3.286430261638761   7.424364450613417  -4.922655182092490 1
+ion As   3.286430261638761  12.997649574740793  -1.646872951514773 1
+ion As   0.000000000000000  18.573142905184426  -1.647660102476177 1
+ion As   0.000000000000000   1.844249773478377   1.646872951514773 1
+ion As   3.286430261638761   7.419743103922010   1.647660102476177 1
+ion As   3.286430261638761  12.997778965964876   4.926433974794211 1
+ion As   0.000000000000000  18.577764251875838   4.922655182092490 1
+ion As   0.000000000000000   1.847974637166053   8.223687334926218 1
+ion As   3.286430261638761   7.420608239205372   8.227475366938572 1
+ion As   3.286430261638761  13.013506401817507  11.490986326517335 1
+ion As   0.000000000000000  18.586889808262487  11.492542964486463 1
+ion As   0.000000000000000   1.835588621730771  14.810741729054016 1
+ion As   3.286430261638761   7.418596607971391  14.808836104041312 1
+ion As   3.286430261638761  13.031504765604353  18.018002372819968 1
+ion As   0.000000000000000  18.602471237977419  18.097919163689426 1
+ion As   0.000000000000000   1.869235346415588  21.462735334663176 1
+ion As   3.286430261638761   7.305495450603801  21.416763424322550 1
+ion As   3.286430261638761  12.835208640740337  24.344018746306773 1
+ion As   0.000000000000000  18.514704428272442  24.849679371704706 1
+ion As   0.000000000000000   1.946724526275311  28.087137209892614 1
+ion As   3.286430261638761   7.751525400030227  28.046352451350270 1
+ion-species GBRV/$ID_pbe.uspp
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0.0001 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	convergeAll          no \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	abortOnFailedStep    no \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.020000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.040000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.060000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.080000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.100000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.120000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.140000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.160000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.180000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.200000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.220000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.240000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.260000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.280000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.300000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.320000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.340000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.360000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.380000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.400000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.420000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.440000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.460000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.480000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.020000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.040000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.060000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.080000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.100000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.120000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.140000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.160000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.180000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.200000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.220000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.240000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.260000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.280000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.300000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.320000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.340000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.360000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.380000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.400000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.420000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.440000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.460000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.480000000000   0.000000000000  0.00990099009901
+kpoint   0.500000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.480000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.460000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.440000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.420000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.400000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.380000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.360000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.340000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.320000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.300000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.280000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.260000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.240000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.220000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.200000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.180000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.160000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.140000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.120000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.100000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.080000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.060000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.040000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.020000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.500000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.480000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.460000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.440000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.420000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.400000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.380000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.360000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.340000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.320000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.300000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.280000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.260000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.240000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.220000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.200000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.180000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.160000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.140000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.120000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.100000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.080000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.060000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.040000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.020000000000   0.000000000000  0.00990099009901
+kpoint   0.000000000000   0.000000000000   0.000000000000  0.00990099009901
+kpoint-folding 1 1 1 
+latt-move-scale 1 1 0
+latt-scale 1 1 1 
+lattice  \
+	   6.572860523277522    0.000000000000000    0.000000000000000  \
+	   0.000000000000000   22.306799602524830    0.000000000000000  \
+	   0.000000000000000    0.000000000000000   87.501636573688344 
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	convergeAll          no \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	abortOnFailedStep    no \
+	fdTest               no
+lcao-params -1 1e-06 0.01
+pcm-variant GLSSA13
+perturb-minimize  \
+	nIterations            0 \
+	algorithm              MINRES \
+	residualTol            0.0001 \
+	residualDiffThreshold  0.0001 \
+	CGBypass               no \
+	recomputeResidual      no
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries none
+symmetry-threshold 0.0001
+
+
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[      6.57286            0            0  ]
+[            0      22.3068            0  ]
+[            0            0      87.5016  ]
+unit cell volume = 12829.4
+G =
+[   0.955929          0          0  ]
+[          0   0.281671          0  ]
+[          0          0  0.0718065  ]
+Minimum fftbox size, Smin = [  40  128  492  ]
+Chosen fftbox size, S = [  40  128  500  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[      6.57286            0            0  ]
+[            0      22.3068            0  ]
+[            0            0      87.5016  ]
+unit cell volume = 12829.4
+G =
+[   0.955929          0          0  ]
+[          0   0.281671          0  ]
+[          0          0  0.0718065  ]
+Minimum fftbox size, Smin = [  32  104  396  ]
+Chosen fftbox size, S = [  32  108  400  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBE GGA exchange.
+Initalized PBE GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file '/gpfs/u/home/AISD/AISDsdrs/barn-shared/dcs/JDFTx/build/pseudopotentials/GBRV/nb_pbe.uspp':
+  Title: Nb.  Created by USPP 7.3.6 on 14-9-2013
+  Reference state energy: -58.592548.  13 valence electrons in orbitals:
+    |400>  occupation: 2  eigenvalue: -2.145853
+    |410>  occupation: 6  eigenvalue: -1.268635
+    |420>  occupation: 4  eigenvalue: -0.111734
+    |500>  occupation: 1  eigenvalue: -0.146332
+    |510>  occupation: 0  eigenvalue: -0.040820
+  lMax: 2  lLocal: 3  QijEcut: 5
+  6 projectors sampled on a log grid with 627 points:
+    l: 0  eig: -2.145854  rCut: 1.8
+    l: 0  eig: -0.146334  rCut: 1.8
+    l: 1  eig: -1.268634  rCut: 2
+    l: 1  eig: 0.150000  rCut: 2
+    l: 2  eig: -0.040820  rCut: 2.2
+    l: 2  eig: 0.150000  rCut: 2.2
+  Partial core density with radius 1.2
+  Transforming core density to a uniform radial grid of dG=0.02 with 1597 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1597 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 483 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1597 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 483 points.
+  Core radius for overlap checks: 2.20 bohrs.
+
+Reading pseudopotential file '/gpfs/u/home/AISD/AISDsdrs/barn-shared/dcs/JDFTx/build/pseudopotentials/GBRV/as_pbe.uspp':
+  Title: As.  Created by USPP 7.3.6 on 14-9-2013
+  Reference state energy: -19.965231.  5 valence electrons in orbitals:
+    |400>  occupation: 2  eigenvalue: -0.532639
+    |410>  occupation: 3  eigenvalue: -0.190915
+  lMax: 2  lLocal: 2  QijEcut: 5
+  6 projectors sampled on a log grid with 623 points:
+    l: 0  eig: -0.532635  rCut: 1.5
+    l: 0  eig: 0.500000  rCut: 1.5
+    l: 1  eig: -0.190916  rCut: 1.5
+    l: 1  eig: 0.500000  rCut: 1.5
+    l: 2  eig: 0.000000  rCut: 1.9
+    l: 2  eig: 1.000000  rCut: 1.9
+  Partial core density with radius 1.2
+  Transforming core density to a uniform radial grid of dG=0.02 with 1597 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1597 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 483 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1597 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 483 points.
+  Core radius for overlap checks: 1.90 bohrs.
+
+Initialized 2 species with 72 total atoms.
+
+Folded 101 k-points by 1x1x1 to 101 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+No reducable k-points. 
+Computing the number of bands and number of electrons
+Calculating initial fillings.
+nElectrons: 648.000000   nBands: 612   nStates: 101
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 76596.693 , ideal nbasis = 76597.019
+
+---------- Setting up coulomb interaction ----------
+Setting up double-sized grid for truncated Coulomb potentials:
+R = 
+[      6.57286            0            0  ]
+[            0      22.3068            0  ]
+[            0            0      175.003  ]
+unit cell volume = 25658.9
+G =
+[   0.955929          0          0  ]
+[          0   0.281671          0  ]
+[          0          0  0.0359032  ]
+Chosen fftbox size, S = [  40  128  1000  ]
+Integer grid location selected as the embedding center:
+   Grid: [  0  0  0  ]
+   Lattice: [  0  0  0  ]
+   Cartesian: [  0  0  0  ]
+Constructing Wigner-Seitz cell: 6 faces (6 quadrilaterals, 0 hexagons)
+Range-separation parameter for embedded mesh potentials due to point charges: 0.527756 bohrs.
+Initialized slab truncation along lattice direction 001
+
+---------- Setting up 2D ewald sum ----------
+Optimum gaussian width for ewald sums = 7.223512 bohr.
+Real space sums over 275 unit cells with max indices [  12  5  0  ]
+Reciprocal space sums over 91 terms with max indices [  3  6  0  ]
+
+---------- Allocating electronic variables ----------
+Reading n from file 'totalE.n' ... done
+Initializing wave functions:  linear combination of atomic orbitals
+
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBE exchange-correlation functional:
+      J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+
+   Pseudopotentials:
+      KF Garrity, JW Bennett, KM Rabe and D Vanderbilt, Comput. Mater. Sci. 81, 446 (2014)
+
+   Truncated Coulomb potentials:
+      R. Sundararaman and T.A. Arias, Phys. Rev. B 87, 165122 (2013)
+
+   Total energy minimization with Auxiliary Hamiltonian:
+      C. Freysoldt, S. Boeck, and J. Neugebauer, Phys. Rev. B 79, 241103(R) (2009)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:     14.83
+
+
+----------- Band structure minimization -------------
+Minimization will be done independently for each quantum number.
+
+---- Minimization of quantum number:     0  [ +0.0000000 +0.0000000 +0.0000000 ]  0.019801980 ----
+BandDavidson: Iter:   0  Eband: -4.872604638717132
+BandDavidson: Iter:   1  Eband: -5.164767035549815  dEband: -2.921624e-01  t[s]:     17.59
+BandDavidson: Iter:   2  Eband: -5.244142549426435  dEband: -7.937551e-02  t[s]:     19.18
+BandDavidson: Iter:   3  Eband: -5.267663137874342  dEband: -2.352059e-02  t[s]:     20.66
+BandDavidson: Iter:   4  Eband: -5.282763339295671  dEband: -1.510020e-02  t[s]:     22.14
+BandDavidson: Iter:   5  Eband: -5.290206527441201  dEband: -7.443188e-03  t[s]:     23.62
+BandDavidson: Iter:   6  Eband: -5.293192656941258  dEband: -2.986130e-03  t[s]:     25.11
+BandDavidson: Iter:   7  Eband: -5.293899947514900  dEband: -7.072906e-04  t[s]:     26.52
+BandDavidson: Iter:   8  Eband: -5.294126402668489  dEband: -2.264552e-04  t[s]:     27.93
+BandDavidson: Iter:   9  Eband: -5.294219249700630  dEband: -9.284703e-05  t[s]:     29.34
+BandDavidson: Iter:  10  Eband: -5.294262366065734  dEband: -4.311637e-05  t[s]:     30.60
+BandDavidson: Iter:  11  Eband: -5.294283762436090  dEband: -2.139637e-05  t[s]:     31.85
+BandDavidson: Iter:  12  Eband: -5.294295024468527  dEband: -1.126203e-05  t[s]:     33.11
+BandDavidson: Iter:  13  Eband: -5.294301205195134  dEband: -6.180727e-06  t[s]:     34.37
+BandDavidson: Iter:  14  Eband: -5.294304651128169  dEband: -3.445933e-06  t[s]:     35.53
+BandDavidson: Iter:  15  Eband: -5.294306606910215  dEband: -1.955782e-06  t[s]:     36.47
+BandDavidson: Iter:  16  Eband: -5.294307772768811  dEband: -1.165859e-06  t[s]:     37.28
+BandDavidson: Iter:  17  Eband: -5.294308505751432  dEband: -7.329826e-07  t[s]:     38.07
+BandDavidson: Iter:  18  Eband: -5.294308983863125  dEband: -4.781117e-07  t[s]:     38.87
+BandDavidson: Iter:  19  Eband: -5.294309303872819  dEband: -3.200097e-07  t[s]:     39.66
+BandDavidson: Iter:  20  Eband: -5.294309522403993  dEband: -2.185312e-07  t[s]:     40.42
+BandDavidson: Iter:  21  Eband: -5.294309674909814  dEband: -1.525058e-07  t[s]:     41.17
+BandDavidson: Iter:  22  Eband: -5.294309783520587  dEband: -1.086108e-07  t[s]:     41.92
+BandDavidson: Iter:  23  Eband: -5.294309862421350  dEband: -7.890076e-08  t[s]:     42.67
+BandDavidson: Iter:  24  Eband: -5.294309920588976  dEband: -5.816763e-08  t[s]:     43.41
+BandDavidson: Iter:  25  Eband: -5.294309964155433  dEband: -4.356646e-08  t[s]:     44.16
+BandDavidson: Iter:  26  Eband: -5.294309997215280  dEband: -3.305985e-08  t[s]:     44.91
+BandDavidson: Iter:  27  Eband: -5.294310022638611  dEband: -2.542333e-08  t[s]:     45.64
+BandDavidson: Iter:  28  Eband: -5.294310041756913  dEband: -1.911830e-08  t[s]:     46.34
+BandDavidson: Iter:  29  Eband: -5.294310056694316  dEband: -1.493740e-08  t[s]:     47.00
+BandDavidson: Iter:  30  Eband: -5.294310068459354  dEband: -1.176504e-08  t[s]:     47.67
+BandDavidson: Iter:  31  Eband: -5.294310077858268  dEband: -9.398914e-09  t[s]:     48.33
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     1  [ +0.0200000 +0.0000000 +0.0000000 ]  0.019801980 ----
+BandDavidson: Iter:   0  Eband: -4.873208159551647
+BandDavidson: Iter:   1  Eband: -5.164415299785354  dEband: -2.912071e-01  t[s]:     50.29
+BandDavidson: Iter:   2  Eband: -5.243407582850925  dEband: -7.899228e-02  t[s]:     51.77
+BandDavidson: Iter:   3  Eband: -5.266384271801739  dEband: -2.297669e-02  t[s]:     53.26
+BandDavidson: Iter:   4  Eband: -5.281822032716744  dEband: -1.543776e-02  t[s]:     54.74
+BandDavidson: Iter:   5  Eband: -5.289840540536746  dEband: -8.018508e-03  t[s]:     56.22
+BandDavidson: Iter:   6  Eband: -5.292887102831490  dEband: -3.046562e-03  t[s]:     57.71
+BandDavidson: Iter:   7  Eband: -5.293805661031422  dEband: -9.185582e-04  t[s]:     59.12
+BandDavidson: Iter:   8  Eband: -5.294087505653217  dEband: -2.818446e-04  t[s]:     60.54
+BandDavidson: Iter:   9  Eband: -5.294200883177257  dEband: -1.133775e-04  t[s]:     61.95
+BandDavidson: Iter:  10  Eband: -5.294253376625382  dEband: -5.249345e-05  t[s]:     63.20
+BandDavidson: Iter:  11  Eband: -5.294279784448606  dEband: -2.640782e-05  t[s]:     64.46
+BandDavidson: Iter:  12  Eband: -5.294293871840115  dEband: -1.408739e-05  t[s]:     65.72
+BandDavidson: Iter:  13  Eband: -5.294301634494044  dEband: -7.762654e-06  t[s]:     66.98
+BandDavidson: Iter:  14  Eband: -5.294306004217590  dEband: -4.369724e-06  t[s]:     68.12
+BandDavidson: Iter:  15  Eband: -5.294308485392392  dEband: -2.481175e-06  t[s]:     68.99
+BandDavidson: Iter:  16  Eband: -5.294309966833933  dEband: -1.481442e-06  t[s]:     69.79
+BandDavidson: Iter:  17  Eband: -5.294310895893844  dEband: -9.290599e-07  t[s]:     70.58
+BandDavidson: Iter:  18  Eband: -5.294311500664768  dEband: -6.047709e-07  t[s]:     71.37
+BandDavidson: Iter:  19  Eband: -5.294311903147765  dEband: -4.024830e-07  t[s]:     72.17
+BandDavidson: Iter:  20  Eband: -5.294312176981593  dEband: -2.738338e-07  t[s]:     72.96
+BandDavidson: Iter:  21  Eband: -5.294312366327925  dEband: -1.893463e-07  t[s]:     73.71
+BandDavidson: Iter:  22  Eband: -5.294312499668798  dEband: -1.333409e-07  t[s]:     74.46
+BandDavidson: Iter:  23  Eband: -5.294312595346232  dEband: -9.567743e-08  t[s]:     75.20
+BandDavidson: Iter:  24  Eband: -5.294312665057344  dEband: -6.971111e-08  t[s]:     75.95
+BandDavidson: Iter:  25  Eband: -5.294312716655412  dEband: -5.159807e-08  t[s]:     76.69
+BandDavidson: Iter:  26  Eband: -5.294312755392306  dEband: -3.873689e-08  t[s]:     77.43
+BandDavidson: Iter:  27  Eband: -5.294312783932498  dEband: -2.854019e-08  t[s]:     78.09
+BandDavidson: Iter:  28  Eband: -5.294312805816052  dEband: -2.188355e-08  t[s]:     78.76
+BandDavidson: Iter:  29  Eband: -5.294312822794111  dEband: -1.697806e-08  t[s]:     79.42
+BandDavidson: Iter:  30  Eband: -5.294312836097294  dEband: -1.330318e-08  t[s]:     80.08
+BandDavidson: Iter:  31  Eband: -5.294312846629238  dEband: -1.053194e-08  t[s]:     80.74
+BandDavidson: Iter:  32  Eband: -5.294312854961091  dEband: -8.331853e-09  t[s]:     81.40
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     2  [ +0.0400000 +0.0000000 +0.0000000 ]  0.019801980 ----
+BandDavidson: Iter:   0  Eband: -4.874353010672841
+BandDavidson: Iter:   1  Eband: -5.164030003517775  dEband: -2.896770e-01  t[s]:     83.35
+BandDavidson: Iter:   2  Eband: -5.243135600685055  dEband: -7.910560e-02  t[s]:     84.83
+BandDavidson: Iter:   3  Eband: -5.265680891677786  dEband: -2.254529e-02  t[s]:     86.32
+BandDavidson: Iter:   4  Eband: -5.280338461208986  dEband: -1.465757e-02  t[s]:     87.80
+BandDavidson: Iter:   5  Eband: -5.288727043886301  dEband: -8.388583e-03  t[s]:     89.29
+BandDavidson: Iter:   6  Eband: -5.292204340445307  dEband: -3.477297e-03  t[s]:     90.77
+BandDavidson: Iter:   7  Eband: -5.293674544330854  dEband: -1.470204e-03  t[s]:     92.19
+BandDavidson: Iter:   8  Eband: -5.294103120042693  dEband: -4.285757e-04  t[s]:     93.60
+BandDavidson: Iter:   9  Eband: -5.294252321953082  dEband: -1.492019e-04  t[s]:     95.02
+BandDavidson: Iter:  10  Eband: -5.294317399886801  dEband: -6.507793e-05  t[s]:     96.28
+BandDavidson: Iter:  11  Eband: -5.294349292191375  dEband: -3.189230e-05  t[s]:     97.54
+BandDavidson: Iter:  12  Eband: -5.294366104380473  dEband: -1.681219e-05  t[s]:     98.79
+BandDavidson: Iter:  13  Eband: -5.294375416077004  dEband: -9.311697e-06  t[s]:    100.05
+BandDavidson: Iter:  14  Eband: -5.294380671542475  dEband: -5.255465e-06  t[s]:    101.20
+BandDavidson: Iter:  15  Eband: -5.294383702717714  dEband: -3.031175e-06  t[s]:    102.07
+BandDavidson: Iter:  16  Eband: -5.294385533578978  dEband: -1.830861e-06  t[s]:    102.86
+BandDavidson: Iter:  17  Eband: -5.294386692843197  dEband: -1.159264e-06  t[s]:    103.65
+BandDavidson: Iter:  18  Eband: -5.294387452930757  dEband: -7.600876e-07  t[s]:    104.44
+BandDavidson: Iter:  19  Eband: -5.294387962356403  dEband: -5.094256e-07  t[s]:    105.24
+BandDavidson: Iter:  20  Eband: -5.294388310733835  dEband: -3.483774e-07  t[s]:    106.00
+BandDavidson: Iter:  21  Eband: -5.294388553285271  dEband: -2.425514e-07  t[s]:    106.75
+BandDavidson: Iter:  22  Eband: -5.294388725334435  dEband: -1.720492e-07  t[s]:    107.49
+BandDavidson: Iter:  23  Eband: -5.294388849309046  dEband: -1.239746e-07  t[s]:    108.24
+BandDavidson: Iter:  24  Eband: -5.294388940068126  dEband: -9.075908e-08  t[s]:    108.99
+BandDavidson: Iter:  25  Eband: -5.294389007322020  dEband: -6.725389e-08  t[s]:    109.74
+BandDavidson: Iter:  26  Eband: -5.294389057814766  dEband: -5.049275e-08  t[s]:    110.48
+BandDavidson: Iter:  27  Eband: -5.294389096197600  dEband: -3.838283e-08  t[s]:    111.23
+BandDavidson: Iter:  28  Eband: -5.294389125667899  dEband: -2.947030e-08  t[s]:    111.97
+BandDavidson: Iter:  29  Eband: -5.294389147909569  dEband: -2.224167e-08  t[s]:    112.64
+BandDavidson: Iter:  30  Eband: -5.294389165268913  dEband: -1.735934e-08  t[s]:    113.30
+BandDavidson: Iter:  31  Eband: -5.294389178950597  dEband: -1.368168e-08  t[s]:    113.96
+BandDavidson: Iter:  32  Eband: -5.294389189846340  dEband: -1.089574e-08  t[s]:    114.62
+BandDavidson: Iter:  33  Eband: -5.294389198575331  dEband: -8.728991e-09  t[s]:    115.28
+BandDavidson: Converged (dEband<1.000000e-08)
+
+---- Minimization of quantum number:     3  [ +0.0600000 +0.0000000 +0.0000000 ]  0.019801980 ----
+BandDavidson: Iter:   0  Eband: -4.876303647282422
+BandDavidson: Iter:   1  Eband: -5.163674491235427  dEband: -2.873708e-01  t[s]:    117.23
+BandDavidson: Iter:   2  Eband: -5.243172663738104  dEband: -7.949817e-02  t[s]:    118.72
+BandDavidson: Iter:   3  Eband: -5.264970658566266  dEband: -2.179799e-02  t[s]:    120.21
+BandDavidson: Iter:   4  Eband: -5.279701707773860  dEband: -1.473105e-02  t[s]:    121.70
+BandDavidson: Iter:   5  Eband: -5.288221601960398  dEband: -8.519894e-03  t[s]:    123.18
+BandDavidson: Iter:   6  Eband: -5.292226112914647  dEband: -4.004511e-03  t[s]:    124.66
+BandDavidson: Iter:   7  Eband: -5.293727550542648  dEband: -1.501438e-03  t[s]:    126.08
+BandDavidson: Iter:   8  Eband: -5.294156259468354  dEband: -4.287089e-04  t[s]:    127.49
+BandDavidson: Iter:   9  Eband: -5.294317582204879  dEband: -1.613227e-04  t[s]:    128.90
+BandDavidson: Iter:  10  Eband: -5.294390112644768  dEband: -7.253044e-05  t[s]:    130.16
+BandDavidson: Iter:  11  Eband: -5.294426031624757  dEband: -3.591898e-05  t[s]:    131.42
+BandDavidson: Iter:  12  Eband: -5.294444960162876  dEband: -1.892854e-05  t[s]:    132.67
+BandDavidson: Iter:  13  Eband: -5.294455349619110  dEband: -1.038946e-05  t[s]:    133.94
+BandDavidson: Iter:  14  Eband: -5.294461147508877  dEband: -5.797890e-06  t[s]:    135.04
+BandDavidson: Iter:  15  Eband: -5.294464441922493  dEband: -3.294414e-06  t[s]:    135.86
+BandDavidson: Iter:  16  Eband: -5.294466408661626  dEband: -1.966739e-06  t[s]:    136.65
+BandDavidson: Iter:  17  Eband: -5.294467639992208  dEband: -1.231331e-06  t[s]:    137.45
+BandDavidson: Iter:  18  Eband: -5.294468439151349  dEband: -7.991591e-07  t[s]:    138.25
+BandDavidson: Iter:  19  Eband: -5.294468969466115  dEband: -5.303148e-07  t[s]:    139.04
+BandDavidson: Iter:  20  Eband: -5.294469329079929  dEband: -3.596138e-07  t[s]:    139.80
+BandDavidson: Iter:  21  Eband: -5.294469578195158  dEband: -2.491152e-07  t[s]:    140.55
+BandDavidson: Iter:  22  Eband: -5.294469753897075  dEband: -1.757019e-07  t[s]:    141.30
+BandDavidson: Iter:  23  Eband: -5.294469880408652  dEband: -1.265116e-07  t[s]:    142.05
+BandDavidson: Iter:  24  Eband: -5.294469972962233  dEband: -9.255358e-08  t[s]:    142.80
+BandDavidson: Iter:  25  Eband: -5.294470041824759  dEband: -6.886253e-08  t[s]:    143.55
+BandDavidson: Iter:  26  Eband: -5.294470093698014  dEband: -5.187326e-08  t[s]:    144.29
+BandDavidson: Iter:  27  Eband: -5.294470133344366  dEband: -3.964635e-08  t[s]:    145.03
+BandDavidson: Iter:  28  Eband: -5.294470163198690  dEband: -2.985432e-08  t[s]:    145.72
+BandDavidson: Iter:  29  Eband: -5.294470186420464  dEband: -2.322177e-08  t[s]:    146.38
+BandDavidson: Iter:  30  Eband: -5.294470204664658  dEband: -1.824419e-08  t[s]:    147.04
+BandDavidson: Iter:  31  Eband: -5.294470219107914  dEband: -1.444326e-08  t[s]:    147.70
+BandDavidson: Iter:  32  Eband: -5.294470230645801  dEband: -1.153789e-08  t[s]:    148.36
+BandDavidson: Iter:  33  Eband: -5.294470239944653  dEband: -9.298852e-09  t[s]:    149.01
+BandDavidson: Converged (dEband<1.000000e-08)
+	FillingsUpdate:  mu: -0.164895149  nElectrons: 648.000000
+
+Dumping 'bandstruct.eigenvals' ... done
+End date and time: Wed May  6 13:46:16 2026  (Duration: 0-0:03:31.03)
+Done!
+
+PROFILER:         augmentDensityGridGrad     0.196009 +/-     0.009224 s,    4 calls,      0.784037 s total
+PROFILER:    augmentDensitySphericalGrad     0.007311 +/-     0.000537 s,  274 calls,      2.003212 s total
+PROFILER:                 augmentOverlap     0.068640 +/-     0.025371 s,  532 calls,     36.516298 s total
+PROFILER:                     changeGrid     0.000140 +/-     0.000002 s,  137 calls,      0.019239 s total
+PROFILER:        ColumnBundle::randomize     0.134055 +/-     0.081196 s,    4 calls,      0.536222 s total
+PROFILER:              EdensityAndVscloc     1.003926 +/-     0.878379 s,    2 calls,      2.007853 s total
+PROFILER:                     EnlAndGrad     0.013126 +/-     0.000979 s,  274 calls,      3.596608 s total
+PROFILER:            ExCorrCommunication     0.260708 +/-     0.571436 s,    8 calls,      2.085662 s total
+PROFILER:               ExCorrFunctional     0.000104 +/-     0.000018 s,    3 calls,      0.000313 s total
+PROFILER:                    ExCorrTotal     0.699780 +/-     0.830973 s,    3 calls,      2.099341 s total
+PROFILER:                   Idag_DiagV_I     0.218491 +/-     0.120243 s,  137 calls,     29.933324 s total
+PROFILER:            matrix::diagonalize     0.081491 +/-     0.023835 s,  141 calls,     11.490281 s total
+PROFILER:                    matrix::set     0.000025 +/-     0.000103 s, 20808 calls,      0.525362 s total
+PROFILER:            orthoMatrix(matrix)     0.007989 +/-     0.003046 s,  137 calls,      1.094497 s total
+PROFILER:     RadialFunctionR::transform     0.001364 +/-     0.000531 s,   98 calls,      0.133688 s total
+PROFILER:                    reduceKmesh     0.000006 +/-     0.000000 s,    1 calls,      0.000006 s total
+PROFILER:                            Y*M     0.029095 +/-     0.012483 s, 1350 calls,     39.278507 s total
+PROFILER:                          Y1^Y2     0.028145 +/-     0.015487 s, 1076 calls,     30.283729 s total
+
+MEMUSAGE:                   ColumnBundle     6.723531 GB
+MEMUSAGE:        complexScalarFieldTilde     0.020599 GB
+MEMUSAGE:                    IndexArrays     0.124854 GB
+MEMUSAGE:                         matrix     0.379563 GB
+MEMUSAGE:                           misc     0.069691 GB
+MEMUSAGE:                     RealKernel     0.009575 GB
+MEMUSAGE:                    ScalarField     0.171661 GB
+MEMUSAGE:               ScalarFieldTilde     0.210495 GB
+MEMUSAGE:                          Total     7.175577 GB
