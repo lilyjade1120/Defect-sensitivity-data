@@ -1,0 +1,5 @@
+#!/bin/bash
+#SBATCH -o bandstruct.out -t 6:00:00 -N 4 -n 24 -c 1 --gres=gpu:6
+module load gcc/8.4.0/1 cuda/10.2
+module load openmpi/4.0.3/1
+mpirun -mca coll_hcoll_enable 0 --bind-to none /gpfs/u/home/NECD/NECDsskm/Software/JDFTx/build/jdftx_gpu -i bandstruct.in

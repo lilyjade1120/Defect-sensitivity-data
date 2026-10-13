@@ -1,0 +1,13 @@
+include totalE.lattice
+include totalE.ionpos
+
+ion-species Nb.nc-rel-pbe.upf
+ion-species As.nc-rel-pbe.upf
+
+spintype spin-orbit
+elec-n-bands 1000
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+elec-ex-corr gga-PBE
+
+elec-cutoff 40 200

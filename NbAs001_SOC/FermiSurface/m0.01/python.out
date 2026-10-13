@@ -1,0 +1,9 @@
+Constructed kx-ky BZ polygon with 4 edges and vertices
+Reduced 17161 k-points in bbox k-mesh to 4356 under symmetries
+Computing 44 blocks: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 done.
+Fermi level cuts band 125 with 16 edges and 21 vertices. Computing 1 blocks: 1 done.
+Fermi level cuts band 126 with 152 edges and 170 vertices. Computing 2 blocks: 1 2 done.
+Fermi level cuts band 127 with 388 edges and 425 vertices. Computing 5 blocks: 1 2 3 4 5 done.
+Fermi level cuts band 128 with 548 edges and 588 vertices. Computing 6 blocks: 1 2 3 4 5 6 done.
+Fermi level cuts band 129 with 716 edges and 772 vertices. Computing 8 blocks: 1 2 3 4 5 6 7 8 done.
+Fermi level cuts band 130 with 680 edges and 720 vertices. Computing 8 blocks: 1 2 3 4 5 6 7 8 done.

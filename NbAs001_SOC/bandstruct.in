@@ -1,0 +1,7 @@
+include common.in
+include bandstruct.kpoints         #Get kpoints along high-symmetry path created above
+elec-smearing Fermi 0.01
+fix-electron-density totalE.$VAR   #Fix the electron density (not self-consistent)
+dump End BandEigs BandProjections                 #Output the band eigenvalues for plotting
+dump-name bandstruct.$VAR
+

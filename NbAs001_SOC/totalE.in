@@ -1,0 +1,16 @@
+include common.in
+
+kpoint-folding 8 8 1
+elec-smearing Fermi 0.01
+
+converge-empty-states yes
+dump-name totalE.$VAR
+
+electronic-SCF nIterations 200
+#ionic-minimize nIterations 100
+
+forces-output-coords Cartesian
+
+dump Ionic State
+dump End BandEigs ElecDensity EigStats Symmetries FermiVelocity
+
