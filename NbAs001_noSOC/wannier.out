@@ -1,0 +1,918 @@
+
+*************** JDFTx 1.7.0 (git hash 52548a96) ***************
+
+Start date and time: Wed Jul 15 13:48:12 2026
+Executable wannier with command-line: -i wannier.in
+Running on hosts (process indices):  cpu1010 (0-15)
+Divided in process groups (process indices):  0 (0)  1 (1)  2 (2)  3 (3)  4 (4)  5 (5)  6 (6)  7 (7)  8 (8)  9 (9)  10 (10)  11 (11)  12 (12)  13 (13)  14 (14)  15 (15)
+Resource initialization completed at t[s]:      0.01
+Run totals: 16 processes, 16 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+converge-empty-states yes
+coords-type Lattice
+core-overlap-check vector
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+davidson-band-ratio 1.1
+dump End State IonicPositions Lattice ElecDensity EigStats Velocities FermiVelocity
+dump Init Symmetries Kpoints Gvectors
+dump-name totalE.$VAR
+elec-cutoff 30
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+elec-n-bands 0 1.5
+elec-smearing Fermi 0.01
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          400 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	convergeAll          no \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	abortOnFailedStep    no \
+	fdTest               no
+exchange-regularization WignerSeitzTruncated
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	convergeAll          no \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	abortOnFailedStep    no \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	poleEl 15 7 1
+forces-output-coords Positions
+ion Nb   0.500000000000000   0.500000000000000  -0.392038000000000 1
+ion Nb   0.500000000000000   1.000000000000000  -0.344083000000000 1
+ion Nb   0.000000000000000   1.000000000000000  -0.292326000000000 1
+ion Nb   0.000000000000000   0.500000000000000  -0.240686000000000 1
+ion Nb   0.500000000000000   0.500000000000000  -0.189017000000000 1
+ion Nb   0.500000000000000   1.000000000000000  -0.137352000000000 1
+ion Nb   0.000000000000000   1.000000000000000  -0.085752000000000 1
+ion Nb   0.000000000000000   0.500000000000000  -0.034193000000000 1
+ion Nb   0.500000000000000   0.500000000000000   0.017356000000000 1
+ion Nb   0.500000000000000   1.000000000000000   0.068895000000000 1
+ion Nb   0.000000000000000   1.000000000000000   0.120419000000000 1
+ion Nb   0.000000000000000   0.500000000000000   0.171926000000000 1
+ion Nb   0.500000000000000   0.500000000000000   0.223429000000000 1
+ion Nb   0.500000000000000   1.000000000000000   0.274962000000000 1
+ion Nb   0.000000000000000   1.000000000000000   0.326491000000000 1
+ion Nb   0.000000000000000   0.500000000000000   0.378387000000000 1
+ion As   0.000000000000000   1.000000000000000  -0.379347000000000 1
+ion As   0.000000000000000   0.500000000000000  -0.327065000000000 1
+ion As   0.500000000000000   0.500000000000000  -0.275436000000000 1
+ion As   0.500000000000000   1.000000000000000  -0.223762000000000 1
+ion As   0.000000000000000   1.000000000000000  -0.172086000000000 1
+ion As   0.000000000000000   0.500000000000000  -0.120455000000000 1
+ion As   0.500000000000000   0.500000000000000  -0.068884000000000 1
+ion As   0.500000000000000   1.000000000000000  -0.017330000000000 1
+ion As   0.000000000000000   1.000000000000000   0.034211000000000 1
+ion As   0.000000000000000   0.500000000000000   0.085744000000000 1
+ion As   0.500000000000000   0.500000000000000   0.137259000000000 1
+ion As   0.500000000000000   1.000000000000000   0.188761000000000 1
+ion As   0.000000000000000   1.000000000000000   0.240289000000000 1
+ion As   0.000000000000000   0.500000000000000   0.291881000000000 1
+ion As   0.500000000000000   0.500000000000000   0.343770000000000 1
+ion As   0.500000000000000   1.000000000000000   0.396032000000000 1
+ion-species SG15/$ID_ONCV_PBE.upf
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0.0001 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	convergeAll          no \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	abortOnFailedStep    no \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
+kpoint-folding 8 8 1 
+latt-move-scale 1 1 0
+latt-scale 1 1 1 
+lattice  \
+	   6.585092000000000    0.000000000000000    0.000000000000000  \
+	   0.000000000000000    6.585092000000000    0.000000000000000  \
+	   0.000000000000000    0.000000000000000  107.801297000000005 
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	convergeAll          no \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	abortOnFailedStep    no \
+	fdTest               no
+lcao-params 100 1e-06 0.01
+pcm-variant GLSSA13
+perturb-minimize  \
+	nIterations            0 \
+	algorithm              MINRES \
+	residualTol            0.0001 \
+	residualDiffThreshold  0.0001 \
+	CGBypass               no \
+	recomputeResidual      no
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+wannier  \
+	addAtomicOrbitals no \
+	pinAtomicOrbitals no \
+	ignoreSemiCore yes \
+	localizationMeasure FiniteDifference \
+	saveWfns no \
+	saveWfnsRealSpace no \
+	saveMomenta no \
+	saveSpin no \
+	saveR no \
+	saveRP no \
+	slabWeight 0.6 0.025 1 \
+	loadRotations yes \
+	outerWindow -0.41 0.4 \
+	innerWindow -0.41 -0.054 \
+	rSmooth 1 \
+	spinMode All \
+	polar no
+wannier-center Nb 1 2  1
+wannier-center Nb 1 dxy  1
+wannier-center Nb 1 dyz  1
+wannier-center Nb 1 dxz  1
+wannier-center Nb 1 dx2-y2  1
+wannier-center Nb 1 dz2  1
+wannier-center Nb 2 2  1
+wannier-center Nb 2 dxy  1
+wannier-center Nb 2 dyz  1
+wannier-center Nb 2 dxz  1
+wannier-center Nb 2 dx2-y2  1
+wannier-center Nb 2 dz2  1
+wannier-center Nb 3 2  1
+wannier-center Nb 3 dxy  1
+wannier-center Nb 3 dyz  1
+wannier-center Nb 3 dxz  1
+wannier-center Nb 3 dx2-y2  1
+wannier-center Nb 3 dz2  1
+wannier-center Nb 4 2  1
+wannier-center Nb 4 dxy  1
+wannier-center Nb 4 dyz  1
+wannier-center Nb 4 dxz  1
+wannier-center Nb 4 dx2-y2  1
+wannier-center Nb 4 dz2  1
+wannier-center Nb 5 2  1
+wannier-center Nb 5 dxy  1
+wannier-center Nb 5 dyz  1
+wannier-center Nb 5 dxz  1
+wannier-center Nb 5 dx2-y2  1
+wannier-center Nb 5 dz2  1
+wannier-center Nb 6 2  1
+wannier-center Nb 6 dxy  1
+wannier-center Nb 6 dyz  1
+wannier-center Nb 6 dxz  1
+wannier-center Nb 6 dx2-y2  1
+wannier-center Nb 6 dz2  1
+wannier-center Nb 7 2  1
+wannier-center Nb 7 dxy  1
+wannier-center Nb 7 dyz  1
+wannier-center Nb 7 dxz  1
+wannier-center Nb 7 dx2-y2  1
+wannier-center Nb 7 dz2  1
+wannier-center Nb 8 2  1
+wannier-center Nb 8 dxy  1
+wannier-center Nb 8 dyz  1
+wannier-center Nb 8 dxz  1
+wannier-center Nb 8 dx2-y2  1
+wannier-center Nb 8 dz2  1
+wannier-center Nb 9 2  1
+wannier-center Nb 9 dxy  1
+wannier-center Nb 9 dyz  1
+wannier-center Nb 9 dxz  1
+wannier-center Nb 9 dx2-y2  1
+wannier-center Nb 9 dz2  1
+wannier-center Nb 10 2  1
+wannier-center Nb 10 dxy  1
+wannier-center Nb 10 dyz  1
+wannier-center Nb 10 dxz  1
+wannier-center Nb 10 dx2-y2  1
+wannier-center Nb 10 dz2  1
+wannier-center Nb 11 2  1
+wannier-center Nb 11 dxy  1
+wannier-center Nb 11 dyz  1
+wannier-center Nb 11 dxz  1
+wannier-center Nb 11 dx2-y2  1
+wannier-center Nb 11 dz2  1
+wannier-center Nb 12 2  1
+wannier-center Nb 12 dxy  1
+wannier-center Nb 12 dyz  1
+wannier-center Nb 12 dxz  1
+wannier-center Nb 12 dx2-y2  1
+wannier-center Nb 12 dz2  1
+wannier-center Nb 13 2  1
+wannier-center Nb 13 dxy  1
+wannier-center Nb 13 dyz  1
+wannier-center Nb 13 dxz  1
+wannier-center Nb 13 dx2-y2  1
+wannier-center Nb 13 dz2  1
+wannier-center Nb 14 2  1
+wannier-center Nb 14 dxy  1
+wannier-center Nb 14 dyz  1
+wannier-center Nb 14 dxz  1
+wannier-center Nb 14 dx2-y2  1
+wannier-center Nb 14 dz2  1
+wannier-center Nb 15 2  1
+wannier-center Nb 15 dxy  1
+wannier-center Nb 15 dyz  1
+wannier-center Nb 15 dxz  1
+wannier-center Nb 15 dx2-y2  1
+wannier-center Nb 15 dz2  1
+wannier-center Nb 16 2  1
+wannier-center Nb 16 dxy  1
+wannier-center Nb 16 dyz  1
+wannier-center Nb 16 dxz  1
+wannier-center Nb 16 dx2-y2  1
+wannier-center Nb 16 dz2  1
+wannier-center As 1 px  1
+wannier-center As 1 py  1
+wannier-center As 1 pz  1
+wannier-center As 2 px  1
+wannier-center As 2 py  1
+wannier-center As 2 pz  1
+wannier-center As 3 px  1
+wannier-center As 3 py  1
+wannier-center As 3 pz  1
+wannier-center As 4 px  1
+wannier-center As 4 py  1
+wannier-center As 4 pz  1
+wannier-center As 5 px  1
+wannier-center As 5 py  1
+wannier-center As 5 pz  1
+wannier-center As 6 px  1
+wannier-center As 6 py  1
+wannier-center As 6 pz  1
+wannier-center As 7 px  1
+wannier-center As 7 py  1
+wannier-center As 7 pz  1
+wannier-center As 8 px  1
+wannier-center As 8 py  1
+wannier-center As 8 pz  1
+wannier-center As 9 px  1
+wannier-center As 9 py  1
+wannier-center As 9 pz  1
+wannier-center As 10 px  1
+wannier-center As 10 py  1
+wannier-center As 10 pz  1
+wannier-center As 11 px  1
+wannier-center As 11 py  1
+wannier-center As 11 pz  1
+wannier-center As 12 px  1
+wannier-center As 12 py  1
+wannier-center As 12 pz  1
+wannier-center As 13 px  1
+wannier-center As 13 py  1
+wannier-center As 13 pz  1
+wannier-center As 14 px  1
+wannier-center As 14 py  1
+wannier-center As 14 pz  1
+wannier-center As 15 px  1
+wannier-center As 15 py  1
+wannier-center As 15 pz  1
+wannier-center As 16 px  1
+wannier-center As 16 py  1
+wannier-center As 16 pz  1
+wannier-dump-name wannier.$VAR
+wannier-initial-state totalE.$VAR
+wannier-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	maxThreshold         no \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	convergeAll          no \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	abortOnFailedStep    no \
+	fdTest               no
+
+
+
+---------- Setting up symmetries ----------
+
+Found 16 point-group symmetries of the bravais lattice
+Found 4 space-group symmetries with basis
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[      6.58509            0            0  ]
+[            0      6.58509            0  ]
+[            0            0      107.801  ]
+unit cell volume = 4674.63
+G =
+[   0.954153          0          0  ]
+[          0   0.954153          0  ]
+[          0          0  0.0582849  ]
+Minimum fftbox size, Smin = [  36  36  532  ]
+Chosen fftbox size, S = [  36  36  540  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBE GGA exchange.
+Initalized PBE GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0
+
+Reading pseudopotential file '/home/shankar/DFT/Code/JDFTx/build_testing/pseudopotentials/SG15/Nb_ONCV_PBE.upf':
+  'Nb' pseudopotential, 'PBE' functional
+  Generated using ONCVPSP code by D. R. Hamann
+  Author: Martin Schlipf and Francois Gygi  Date: 150915.
+  13 valence electrons, 4 orbitals, 6 projectors, 1564 radial grid points, with lMax = 2
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1453 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 528 points.
+    4S    l: 0   occupation:  2.0   eigenvalue: -2.235463
+    4P    l: 1   occupation:  6.0   eigenvalue: -1.352972
+    5S    l: 0   occupation:  2.0   eigenvalue: -0.172125
+    4D    l: 2   occupation:  3.0   eigenvalue: -0.170341
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 528 points.
+  Core radius for overlap checks: 1.46 bohrs.
+  Reading pulay file /home/shankar/DFT/Code/JDFTx/build_testing/pseudopotentials/SG15/Nb_ONCV_PBE.pulay ... using dE_dnG = -4.755336e-05 computed for Ecut = 30.
+
+Reading pseudopotential file '/home/shankar/DFT/Code/JDFTx/build_testing/pseudopotentials/SG15/As_ONCV_PBE.upf':
+  'As' pseudopotential, 'PBE' functional
+  Generated using ONCVPSP code by D. R. Hamann
+  Author: Martin Schlipf and Francois Gygi  Date: 150915.
+  5 valence electrons, 2 orbitals, 6 projectors, 1358 radial grid points, with lMax = 2
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1453 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 528 points.
+    4S    l: 0   occupation:  2.0   eigenvalue: -0.532653
+    4P    l: 1   occupation:  3.0   eigenvalue: -0.190913
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 528 points.
+  Core radius for overlap checks: 2.53 bohrs.
+  Reading pulay file /home/shankar/DFT/Code/JDFTx/build_testing/pseudopotentials/SG15/As_ONCV_PBE.pulay ... using dE_dnG = -2.870901e-08 computed for Ecut = 30.
+
+Initialized 2 species with 32 total atoms.
+
+Folded 1 k-points by 8x8x1 to 64 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+Reduced to 25 k-points under symmetry. 
+Computing the number of bands and number of electrons
+Reading initial fillings from 'totalE.fillings'.
+nElectrons: 288.000000   nBands: 336   nStates: 25
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 36685.078 , ideal nbasis = 36687.960
+
+---------- Setting up coulomb interaction ----------
+Setting up double-sized grid for truncated Coulomb potentials:
+R = 
+[      6.58509            0            0  ]
+[            0      6.58509            0  ]
+[            0            0      215.603  ]
+unit cell volume = 9349.27
+G =
+[   0.954153          0          0  ]
+[          0   0.954153          0  ]
+[          0          0  0.0291424  ]
+Chosen fftbox size, S = [  36  36  1080  ]
+Integer grid location selected as the embedding center:
+   Grid: [  0  0  0  ]
+   Lattice: [  0  0  0  ]
+   Cartesian: [  0  0  0  ]
+Constructing Wigner-Seitz cell: 6 faces (6 quadrilaterals, 0 hexagons)
+Range-separation parameter for embedded mesh potentials due to point charges: 0.56367 bohrs.
+Initialized slab truncation along lattice direction 001
+
+---------- Setting up 2D ewald sum ----------
+Optimum gaussian width for ewald sums = 3.928388 bohr.
+Real space sums over 225 unit cells with max indices [  7  7  0  ]
+Reciprocal space sums over 81 terms with max indices [  4  4  0  ]
+
+---------- Allocating electronic variables ----------
+Reading eigenvalues from 'totalE.eigenvals'.
+Initializing wave functions:  reading from 'totalE.wfns'
+
+
+----- Initializing Supercell corresponding to k-point mesh -----
+Lattice vector linear combinations in supercell:
+[   8   0   0  ]
+[   0   8   0  ]
+[   0   0   1  ]
+Supercell lattice vectors:
+[  52.6807  0  0  ]
+[  0  52.6807  0  ]
+[  0  0  107.801  ]
+
+---------- Initializing Wannier Function solver ----------
+
+---------- Initializing supercell grid for Wannier functions ----------
+Dumping 'wannier.mlwfBandRanges' ... done.
+Setting up finite difference formula on k-mesh ... found a 6 neighbour formula.
+nbasis = 48373 for k = [   0.000   0.000   0.000  ]
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBE exchange-correlation functional:
+      J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+
+   Pseudopotentials:
+      M Schlipf and F Gygi, Comput. Phys. Commun. 196, 36 (2015)
+
+   Truncated Coulomb potentials:
+      R. Sundararaman and T.A. Arias, Phys. Rev. B 87, 165122 (2013)
+
+   Total energy minimization with Auxiliary Hamiltonian:
+      C. Freysoldt, S. Boeck, and J. Neugebauer, Phys. Rev. B 79, 241103(R) (2009)
+
+   Maximally-localized Wannier functions:
+      N. Marzari and D. Vanderbilt, Phys. Rev. B 56, 12847 (1997)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+
+Reading initial rotations from 'wannier.mlwfU' ... done.
+NOTE: ignoring trial orbitals since we are resuming a previous WannierMinimize.
+Reading initial overlaps from 'wannier.mlwfM0' ... done.
+WannierMinimize: Iter:   0  Omega:  9.974648963232617e+02  |grad|_K:  3.942e-04  t[s]:     63.55
+WannierMinimize: None of the convergence criteria satisfied after 0 iterations.
+
+Optimum spread:
+	Omega:  9.974648963232617e+02
+	OmegaI: 9.368749147765880e+02
+
+Centers in lattice coords:
+	[ 0.499973 0.499917 -0.41637 ] spread: 10.2976 bohr^2
+	[ 0.500013 0.500002 -0.391824 ] spread: 5.50685 bohr^2
+	[ 0.500024 0.463692 -0.392802 ] spread: 6.36538 bohr^2
+	[ 0.467704 0.499914 -0.392747 ] spread: 6.34868 bohr^2
+	[ 0.499892 0.536332 -0.392803 ] spread: 6.36588 bohr^2
+	[ 0.532386 0.50007 -0.392757 ] spread: 6.34905 bohr^2
+	[ 0.499995 1.49991 -0.360047 ] spread: 9.70132 bohr^2
+	[ 0.5 1.00005 -0.344148 ] spread: 5.77292 bohr^2
+	[ 0.5 0.975391 -0.343147 ] spread: 6.29346 bohr^2
+	[ 0.499996 0.999995 -0.343867 ] spread: 5.90623 bohr^2
+	[ 0.500003 1.00002 -0.342347 ] spread: 6.58439 bohr^2
+	[ 0.5 1.02458 -0.343148 ] spread: 6.29347 bohr^2
+	[ 1.06817e-06 0.999719 -0.258507 ] spread: 9.52214 bohr^2
+	[ 9.23042e-07 1.00184 -0.292436 ] spread: 5.66848 bohr^2
+	[ -3.28709e-07 1.00046 -0.291852 ] spread: 5.85532 bohr^2
+	[ -0.0307797 0.998752 -0.293577 ] spread: 6.84756 bohr^2
+	[ 0.0307732 0.998739 -0.293581 ] spread: 6.84802 bohr^2
+	[ 7.33715e-06 1.00004 -0.293798 ] spread: 6.27621 bohr^2
+	[ 2.77446e-07 0.500042 -0.207265 ] spread: 9.37893 bohr^2
+	[ -1.31388e-07 0.500029 -0.240959 ] spread: 5.71696 bohr^2
+	[ -1.7968e-08 0.4769 -0.239966 ] spread: 6.05819 bohr^2
+	[ -1.28353e-07 0.499999 -0.240457 ] spread: 5.933 bohr^2
+	[ -9.55529e-08 0.52305 -0.239967 ] spread: 6.05815 bohr^2
+	[ 7.57975e-08 0.500001 -0.242474 ] spread: 6.07818 bohr^2
+	[ 0.5 0.499996 -0.155725 ] spread: 9.35878 bohr^2
+	[ 0.5 0.499996 -0.189186 ] spread: 5.63703 bohr^2
+	[ 0.5 0.500008 -0.188749 ] spread: 5.94621 bohr^2
+	[ 0.522314 0.500003 -0.188269 ] spread: 6.02988 bohr^2
+	[ 0.477685 0.500003 -0.188269 ] spread: 6.02967 bohr^2
+	[ 0.500001 0.499996 -0.190835 ] spread: 6.06813 bohr^2
+	[ 0.5 0.999998 -0.104069 ] spread: 9.37625 bohr^2
+	[ 0.5 1 -0.137527 ] spread: 5.62499 bohr^2
+	[ 0.5 0.978008 -0.136597 ] spread: 6.01699 bohr^2
+	[ 0.5 0.999999 -0.137034 ] spread: 5.91773 bohr^2
+	[ 0.5 1.02199 -0.136597 ] spread: 6.0169 bohr^2
+	[ 0.5 1 -0.139145 ] spread: 6.07626 bohr^2
+	[ 5.13139e-08 1 -0.0526279 ] spread: 9.36231 bohr^2
+	[ -4.16425e-07 1 -0.0859343 ] spread: 5.62544 bohr^2
+	[ 4.86357e-07 1 -0.0854216 ] spread: 5.92571 bohr^2
+	[ -0.0221691 1 -0.0849952 ] spread: 6.02074 bohr^2
+	[ 0.0221703 1 -0.084995 ] spread: 6.02057 bohr^2
+	[ -9.9913e-07 1 -0.0875893 ] spread: 6.06658 bohr^2
+	[ 2.86051e-07 0.500001 -0.000994215 ] spread: 9.35662 bohr^2
+	[ -2.83151e-08 0.499999 -0.0343724 ] spread: 5.62838 bohr^2
+	[ -2.95987e-08 0.4781 -0.033444 ] spread: 6.01977 bohr^2
+	[ -1.07925e-07 0.500001 -0.0338575 ] spread: 5.93512 bohr^2
+	[ -2.79984e-08 0.521897 -0.0334443 ] spread: 6.02015 bohr^2
+	[ 1.14084e-07 0.500002 -0.0360013 ] spread: 6.07103 bohr^2
+	[ 0.5 0.5 0.0504682 ] spread: 9.34042 bohr^2
+	[ 0.5 0.5 0.0171767 ] spread: 5.63576 bohr^2
+	[ 0.5 0.5 0.0176952 ] spread: 5.9228 bohr^2
+	[ 0.522214 0.5 0.0181141 ] spread: 6.01658 bohr^2
+	[ 0.477784 0.5 0.0181143 ] spread: 6.01637 bohr^2
+	[ 0.500001 0.5 0.0155365 ] spread: 6.05386 bohr^2
+	[ 0.5 1 0.101976 ] spread: 9.35275 bohr^2
+	[ 0.5 1 0.0687178 ] spread: 5.63238 bohr^2
+	[ 0.5 0.97793 0.0696529 ] spread: 6.00974 bohr^2
+	[ 0.5 1 0.0692365 ] spread: 5.93933 bohr^2
+	[ 0.5 1.02207 0.069653 ] spread: 6.00958 bohr^2
+	[ 0.5 0.999999 0.0670811 ] spread: 6.05471 bohr^2
+	[ -1.71634e-07 0.999999 0.153548 ] spread: 9.36076 bohr^2
+	[ 3.47428e-07 1 0.12024 ] spread: 5.63531 bohr^2
+	[ -3.29621e-07 1 0.120759 ] spread: 5.93857 bohr^2
+	[ 0.0219964 1 0.121176 ] spread: 6.01336 bohr^2
+	[ -0.0219968 1 0.121176 ] spread: 6.01334 bohr^2
+	[ 3.82739e-07 1 0.118613 ] spread: 6.04866 bohr^2
+	[ 3.89597e-07 0.5 0.205018 ] spread: 9.35669 bohr^2
+	[ -4.63643e-09 0.500001 0.171756 ] spread: 5.62796 bohr^2
+	[ -1.2069e-08 0.522098 0.172669 ] spread: 6.01547 bohr^2
+	[ -1.43672e-07 0.499999 0.172269 ] spread: 5.93314 bohr^2
+	[ -1.11068e-08 0.477903 0.172669 ] spread: 6.01566 bohr^2
+	[ 1.77762e-07 0.499999 0.170113 ] spread: 6.05118 bohr^2
+	[ 0.499999 0.499999 0.25663 ] spread: 9.31403 bohr^2
+	[ 0.5 0.5 0.223241 ] spread: 5.61982 bohr^2
+	[ 0.5 0.5 0.223768 ] spread: 5.90215 bohr^2
+	[ 0.522109 0.5 0.224188 ] spread: 6.00411 bohr^2
+	[ 0.47789 0.5 0.224188 ] spread: 6.00394 bohr^2
+	[ 0.500001 0.5 0.221638 ] spread: 6.0536 bohr^2
+	[ 0.499998 1 0.30804 ] spread: 9.37181 bohr^2
+	[ 0.5 0.999999 0.274791 ] spread: 5.61581 bohr^2
+	[ 0.5 1.02258 0.275707 ] spread: 5.96977 bohr^2
+	[ 0.5 1 0.275235 ] spread: 5.89082 bohr^2
+	[ 0.5 0.97742 0.275707 ] spread: 5.96973 bohr^2
+	[ 0.5 1 0.273143 ] spread: 6.06342 bohr^2
+	[ -2.32158e-06 1 0.360053 ] spread: 9.47305 bohr^2
+	[ 8.37785e-07 1 0.32628 ] spread: 5.54212 bohr^2
+	[ -7.03079e-07 1 0.326697 ] spread: 5.78376 bohr^2
+	[ 0.0213122 1 0.327236 ] spread: 5.98298 bohr^2
+	[ -0.0213093 1 0.327235 ] spread: 5.98335 bohr^2
+	[ -2.06502e-06 1 0.324633 ] spread: 5.94958 bohr^2
+	[ 2.32782e-07 0.500001 0.411704 ] spread: 9.81211 bohr^2
+	[ 1.88482e-07 0.499999 0.378296 ] spread: 5.42371 bohr^2
+	[ 8.5188e-08 0.519192 0.378903 ] spread: 5.8158 bohr^2
+	[ 1.00856e-07 0.500001 0.3782 ] spread: 5.70394 bohr^2
+	[ 8.16908e-08 0.480807 0.378903 ] spread: 5.81581 bohr^2
+	[ -4.5001e-08 0.5 0.377099 ] spread: 6.25911 bohr^2
+	[ -7.17453e-06 0.999975 -0.37998 ] spread: 7.7309 bohr^2
+	[ -1.74279e-06 0.999375 -0.38006 ] spread: 7.92364 bohr^2
+	[ 3.16048e-06 1.00056 -0.37816 ] spread: 7.62411 bohr^2
+	[ 2.50078e-07 0.499928 -0.326507 ] spread: 8.03594 bohr^2
+	[ 1.34667e-07 0.500042 -0.326282 ] spread: 8.41186 bohr^2
+	[ -6.00812e-07 0.500203 -0.325486 ] spread: 8.07592 bohr^2
+	[ 0.499998 0.499934 -0.276336 ] spread: 7.42306 bohr^2
+	[ 0.500001 0.48194 -0.277147 ] spread: 8.28056 bohr^2
+	[ 0.500002 0.516312 -0.274924 ] spread: 8.06927 bohr^2
+	[ 0.5 1.00007 -0.223802 ] spread: 7.53299 bohr^2
+	[ 0.5 1.00002 -0.224825 ] spread: 7.42416 bohr^2
+	[ 0.5 1.00007 -0.222386 ] spread: 8.0374 bohr^2
+	[ 4.32943e-07 0.999992 -0.173032 ] spread: 7.3937 bohr^2
+	[ -2.11151e-07 0.999992 -0.17222 ] spread: 7.49583 bohr^2
+	[ -5.03689e-07 1 -0.170744 ] spread: 7.94025 bohr^2
+	[ 2.61992e-08 0.5 -0.120608 ] spread: 7.5003 bohr^2
+	[ 9.1308e-10 0.5 -0.121424 ] spread: 7.38809 bohr^2
+	[ -1.10378e-07 0.5 -0.119089 ] spread: 7.98747 bohr^2
+	[ 0.5 0.5 -0.0698233 ] spread: 7.37875 bohr^2
+	[ 0.5 0.5 -0.0690376 ] spread: 7.51122 bohr^2
+	[ 0.5 0.5 -0.0675106 ] spread: 7.95682 bohr^2
+	[ 0.5 1 -0.0174979 ] spread: 7.51183 bohr^2
+	[ 0.5 1 -0.0182758 ] spread: 7.38584 bohr^2
+	[ 0.5 0.999999 -0.0159762 ] spread: 7.9724 bohr^2
+	[ 5.59419e-07 1 0.033274 ] spread: 7.37846 bohr^2
+	[ -2.55944e-07 1 0.0340531 ] spread: 7.49577 bohr^2
+	[ -5.19675e-07 1 0.0355762 ] spread: 7.96086 bohr^2
+	[ 3.92417e-08 0.5 0.0855883 ] spread: 7.47655 bohr^2
+	[ -2.588e-08 0.5 0.0847925 ] spread: 7.38239 bohr^2
+	[ -6.32127e-08 0.5 0.0871133 ] spread: 7.97041 bohr^2
+	[ 0.5 0.5 0.136333 ] spread: 7.38175 bohr^2
+	[ 0.5 0.5 0.137082 ] spread: 7.48656 bohr^2
+	[ 0.5 0.5 0.138633 ] spread: 7.93505 bohr^2
+	[ 0.5 1 0.188624 ] spread: 7.48813 bohr^2
+	[ 0.5 1 0.187832 ] spread: 7.39156 bohr^2
+	[ 0.5 1 0.190096 ] spread: 7.91239 bohr^2
+	[ 2.4253e-07 1 0.239363 ] spread: 7.3583 bohr^2
+	[ -3.76786e-07 1 0.240128 ] spread: 7.48302 bohr^2
+	[ -1.70752e-07 1 0.241571 ] spread: 7.84898 bohr^2
+	[ 4.76724e-08 0.5 0.291739 ] spread: 7.43144 bohr^2
+	[ -3.04505e-07 0.500001 0.290872 ] spread: 7.32874 bohr^2
+	[ -2.10471e-07 0.499999 0.293196 ] spread: 7.78882 bohr^2
+	[ 0.5 0.5 0.342556 ] spread: 7.39857 bohr^2
+	[ 0.5 0.5 0.343436 ] spread: 7.47789 bohr^2
+	[ 0.5 0.5 0.344762 ] spread: 7.82521 bohr^2
+	[ 0.5 1 0.395074 ] spread: 7.33926 bohr^2
+	[ 0.5 0.999998 0.394101 ] spread: 7.48197 bohr^2
+	[ 0.5 1 0.398896 ] spread: 7.95428 bohr^2
+Dumping 'wannier.mlwfBandContrib' ... done.
+Dumping 'wannier.mlwfCellMap' ... done.
+Dumping 'wannier.mlwfCellWeights'... done.
+Dumping 'wannier.mlwfH' ... done. Relative discarded imaginary part: 5.444182e-06
+Dumping 'wannier.mlwfW' ... 
+
+----- Initializing Supercell corresponding to k-point mesh -----
+Lattice vector linear combinations in supercell:
+[   8   0   0  ]
+[   0   8   0  ]
+[   0   0   1  ]
+Supercell lattice vectors:
+[  52.6807  0  0  ]
+[  0  52.6807  0  ]
+[  0  0  107.801  ]
+
+---------- Initializing Wannier Function solver ----------
+
+---------- Initializing supercell grid for Wannier functions ----------
+Dumping 'wannier.mlwfBandRanges' ... done.
+Setting up finite difference formula on k-mesh ... found a 6 neighbour formula.
+nbasis = 48373 for k = [   0.000   0.000   0.000  ]
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBE exchange-correlation functional:
+      J.P. Perdew, K. Burke and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+
+   Pseudopotentials:
+      M Schlipf and F Gygi, Comput. Phys. Commun. 196, 36 (2015)
+
+   Truncated Coulomb potentials:
+      R. Sundararaman and T.A. Arias, Phys. Rev. B 87, 165122 (2013)
+
+   Total energy minimization with Auxiliary Hamiltonian:
+      C. Freysoldt, S. Boeck, and J. Neugebauer, Phys. Rev. B 79, 241103(R) (2009)
+
+   Maximally-localized Wannier functions:
+      N. Marzari and D. Vanderbilt, Phys. Rev. B 56, 12847 (1997)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+
+Reading initial rotations from 'wannier.mlwfU' ... done.
+NOTE: ignoring trial orbitals since we are resuming a previous WannierMinimize.
+Reading initial overlaps from 'wannier.mlwfM0' ... done.
+WannierMinimize: Iter:   0  Omega:  9.974648963232617e+02  |grad|_K:  3.942e-04  t[s]:     63.12
+WannierMinimize: None of the convergence criteria satisfied after 0 iterations.
+
+Optimum spread:
+	Omega:  9.974648963232617e+02
+	OmegaI: 9.368749147765880e+02
+
+Centers in lattice coords:
+	[ 0.499973 0.499917 -0.41637 ] spread: 10.2976 bohr^2
+	[ 0.500013 0.500002 -0.391824 ] spread: 5.50685 bohr^2
+	[ 0.500024 0.463692 -0.392802 ] spread: 6.36538 bohr^2
+	[ 0.467704 0.499914 -0.392747 ] spread: 6.34868 bohr^2
+	[ 0.499892 0.536332 -0.392803 ] spread: 6.36588 bohr^2
+	[ 0.532386 0.50007 -0.392757 ] spread: 6.34905 bohr^2
+	[ 0.499995 1.49991 -0.360047 ] spread: 9.70132 bohr^2
+	[ 0.5 1.00005 -0.344148 ] spread: 5.77292 bohr^2
+	[ 0.5 0.975391 -0.343147 ] spread: 6.29346 bohr^2
+	[ 0.499996 0.999995 -0.343867 ] spread: 5.90623 bohr^2
+	[ 0.500003 1.00002 -0.342347 ] spread: 6.58439 bohr^2
+	[ 0.5 1.02458 -0.343148 ] spread: 6.29347 bohr^2
+	[ 1.06817e-06 0.999719 -0.258507 ] spread: 9.52214 bohr^2
+	[ 9.23042e-07 1.00184 -0.292436 ] spread: 5.66848 bohr^2
+	[ -3.28709e-07 1.00046 -0.291852 ] spread: 5.85532 bohr^2
+	[ -0.0307797 0.998752 -0.293577 ] spread: 6.84756 bohr^2
+	[ 0.0307732 0.998739 -0.293581 ] spread: 6.84802 bohr^2
+	[ 7.33715e-06 1.00004 -0.293798 ] spread: 6.27621 bohr^2
+	[ 2.77446e-07 0.500042 -0.207265 ] spread: 9.37893 bohr^2
+	[ -1.31388e-07 0.500029 -0.240959 ] spread: 5.71696 bohr^2
+	[ -1.7968e-08 0.4769 -0.239966 ] spread: 6.05819 bohr^2
+	[ -1.28353e-07 0.499999 -0.240457 ] spread: 5.933 bohr^2
+	[ -9.55529e-08 0.52305 -0.239967 ] spread: 6.05815 bohr^2
+	[ 7.57975e-08 0.500001 -0.242474 ] spread: 6.07818 bohr^2
+	[ 0.5 0.499996 -0.155725 ] spread: 9.35878 bohr^2
+	[ 0.5 0.499996 -0.189186 ] spread: 5.63703 bohr^2
+	[ 0.5 0.500008 -0.188749 ] spread: 5.94621 bohr^2
+	[ 0.522314 0.500003 -0.188269 ] spread: 6.02988 bohr^2
+	[ 0.477685 0.500003 -0.188269 ] spread: 6.02967 bohr^2
+	[ 0.500001 0.499996 -0.190835 ] spread: 6.06813 bohr^2
+	[ 0.5 0.999998 -0.104069 ] spread: 9.37625 bohr^2
+	[ 0.5 1 -0.137527 ] spread: 5.62499 bohr^2
+	[ 0.5 0.978008 -0.136597 ] spread: 6.01699 bohr^2
+	[ 0.5 0.999999 -0.137034 ] spread: 5.91773 bohr^2
+	[ 0.5 1.02199 -0.136597 ] spread: 6.0169 bohr^2
+	[ 0.5 1 -0.139145 ] spread: 6.07626 bohr^2
+	[ 5.13139e-08 1 -0.0526279 ] spread: 9.36231 bohr^2
+	[ -4.16425e-07 1 -0.0859343 ] spread: 5.62544 bohr^2
+	[ 4.86357e-07 1 -0.0854216 ] spread: 5.92571 bohr^2
+	[ -0.0221691 1 -0.0849952 ] spread: 6.02074 bohr^2
+	[ 0.0221703 1 -0.084995 ] spread: 6.02057 bohr^2
+	[ -9.9913e-07 1 -0.0875893 ] spread: 6.06658 bohr^2
+	[ 2.86051e-07 0.500001 -0.000994215 ] spread: 9.35662 bohr^2
+	[ -2.83151e-08 0.499999 -0.0343724 ] spread: 5.62838 bohr^2
+	[ -2.95987e-08 0.4781 -0.033444 ] spread: 6.01977 bohr^2
+	[ -1.07925e-07 0.500001 -0.0338575 ] spread: 5.93512 bohr^2
+	[ -2.79984e-08 0.521897 -0.0334443 ] spread: 6.02015 bohr^2
+	[ 1.14084e-07 0.500002 -0.0360013 ] spread: 6.07103 bohr^2
+	[ 0.5 0.5 0.0504682 ] spread: 9.34042 bohr^2
+	[ 0.5 0.5 0.0171767 ] spread: 5.63576 bohr^2
+	[ 0.5 0.5 0.0176952 ] spread: 5.9228 bohr^2
+	[ 0.522214 0.5 0.0181141 ] spread: 6.01658 bohr^2
+	[ 0.477784 0.5 0.0181143 ] spread: 6.01637 bohr^2
+	[ 0.500001 0.5 0.0155365 ] spread: 6.05386 bohr^2
+	[ 0.5 1 0.101976 ] spread: 9.35275 bohr^2
+	[ 0.5 1 0.0687178 ] spread: 5.63238 bohr^2
+	[ 0.5 0.97793 0.0696529 ] spread: 6.00974 bohr^2
+	[ 0.5 1 0.0692365 ] spread: 5.93933 bohr^2
+	[ 0.5 1.02207 0.069653 ] spread: 6.00958 bohr^2
+	[ 0.5 0.999999 0.0670811 ] spread: 6.05471 bohr^2
+	[ -1.71634e-07 0.999999 0.153548 ] spread: 9.36076 bohr^2
+	[ 3.47428e-07 1 0.12024 ] spread: 5.63531 bohr^2
+	[ -3.29621e-07 1 0.120759 ] spread: 5.93857 bohr^2
+	[ 0.0219964 1 0.121176 ] spread: 6.01336 bohr^2
+	[ -0.0219968 1 0.121176 ] spread: 6.01334 bohr^2
+	[ 3.82739e-07 1 0.118613 ] spread: 6.04866 bohr^2
+	[ 3.89597e-07 0.5 0.205018 ] spread: 9.35669 bohr^2
+	[ -4.63643e-09 0.500001 0.171756 ] spread: 5.62796 bohr^2
+	[ -1.2069e-08 0.522098 0.172669 ] spread: 6.01547 bohr^2
+	[ -1.43672e-07 0.499999 0.172269 ] spread: 5.93314 bohr^2
+	[ -1.11068e-08 0.477903 0.172669 ] spread: 6.01566 bohr^2
+	[ 1.77762e-07 0.499999 0.170113 ] spread: 6.05118 bohr^2
+	[ 0.499999 0.499999 0.25663 ] spread: 9.31403 bohr^2
+	[ 0.5 0.5 0.223241 ] spread: 5.61982 bohr^2
+	[ 0.5 0.5 0.223768 ] spread: 5.90215 bohr^2
+	[ 0.522109 0.5 0.224188 ] spread: 6.00411 bohr^2
+	[ 0.47789 0.5 0.224188 ] spread: 6.00394 bohr^2
+	[ 0.500001 0.5 0.221638 ] spread: 6.0536 bohr^2
+	[ 0.499998 1 0.30804 ] spread: 9.37181 bohr^2
+	[ 0.5 0.999999 0.274791 ] spread: 5.61581 bohr^2
+	[ 0.5 1.02258 0.275707 ] spread: 5.96977 bohr^2
+	[ 0.5 1 0.275235 ] spread: 5.89082 bohr^2
+	[ 0.5 0.97742 0.275707 ] spread: 5.96973 bohr^2
+	[ 0.5 1 0.273143 ] spread: 6.06342 bohr^2
+	[ -2.32158e-06 1 0.360053 ] spread: 9.47305 bohr^2
+	[ 8.37785e-07 1 0.32628 ] spread: 5.54212 bohr^2
+	[ -7.03079e-07 1 0.326697 ] spread: 5.78376 bohr^2
+	[ 0.0213122 1 0.327236 ] spread: 5.98298 bohr^2
+	[ -0.0213093 1 0.327235 ] spread: 5.98335 bohr^2
+	[ -2.06502e-06 1 0.324633 ] spread: 5.94958 bohr^2
+	[ 2.32782e-07 0.500001 0.411704 ] spread: 9.81211 bohr^2
+	[ 1.88482e-07 0.499999 0.378296 ] spread: 5.42371 bohr^2
+	[ 8.5188e-08 0.519192 0.378903 ] spread: 5.8158 bohr^2
+	[ 1.00856e-07 0.500001 0.3782 ] spread: 5.70394 bohr^2
+	[ 8.16908e-08 0.480807 0.378903 ] spread: 5.81581 bohr^2
+	[ -4.5001e-08 0.5 0.377099 ] spread: 6.25911 bohr^2
+	[ -7.17453e-06 0.999975 -0.37998 ] spread: 7.7309 bohr^2
+	[ -1.74279e-06 0.999375 -0.38006 ] spread: 7.92364 bohr^2
+	[ 3.16048e-06 1.00056 -0.37816 ] spread: 7.62411 bohr^2
+	[ 2.50078e-07 0.499928 -0.326507 ] spread: 8.03594 bohr^2
+	[ 1.34667e-07 0.500042 -0.326282 ] spread: 8.41186 bohr^2
+	[ -6.00812e-07 0.500203 -0.325486 ] spread: 8.07592 bohr^2
+	[ 0.499998 0.499934 -0.276336 ] spread: 7.42306 bohr^2
+	[ 0.500001 0.48194 -0.277147 ] spread: 8.28056 bohr^2
+	[ 0.500002 0.516312 -0.274924 ] spread: 8.06927 bohr^2
+	[ 0.5 1.00007 -0.223802 ] spread: 7.53299 bohr^2
+	[ 0.5 1.00002 -0.224825 ] spread: 7.42416 bohr^2
+	[ 0.5 1.00007 -0.222386 ] spread: 8.0374 bohr^2
+	[ 4.32943e-07 0.999992 -0.173032 ] spread: 7.3937 bohr^2
+	[ -2.11151e-07 0.999992 -0.17222 ] spread: 7.49583 bohr^2
+	[ -5.03689e-07 1 -0.170744 ] spread: 7.94025 bohr^2
+	[ 2.61992e-08 0.5 -0.120608 ] spread: 7.5003 bohr^2
+	[ 9.1308e-10 0.5 -0.121424 ] spread: 7.38809 bohr^2
+	[ -1.10378e-07 0.5 -0.119089 ] spread: 7.98747 bohr^2
+	[ 0.5 0.5 -0.0698233 ] spread: 7.37875 bohr^2
+	[ 0.5 0.5 -0.0690376 ] spread: 7.51122 bohr^2
+	[ 0.5 0.5 -0.0675106 ] spread: 7.95682 bohr^2
+	[ 0.5 1 -0.0174979 ] spread: 7.51183 bohr^2
+	[ 0.5 1 -0.0182758 ] spread: 7.38584 bohr^2
+	[ 0.5 0.999999 -0.0159762 ] spread: 7.9724 bohr^2
+	[ 5.59419e-07 1 0.033274 ] spread: 7.37846 bohr^2
+	[ -2.55944e-07 1 0.0340531 ] spread: 7.49577 bohr^2
+	[ -5.19675e-07 1 0.0355762 ] spread: 7.96086 bohr^2
+	[ 3.92417e-08 0.5 0.0855883 ] spread: 7.47655 bohr^2
+	[ -2.588e-08 0.5 0.0847925 ] spread: 7.38239 bohr^2
+	[ -6.32127e-08 0.5 0.0871133 ] spread: 7.97041 bohr^2
+	[ 0.5 0.5 0.136333 ] spread: 7.38175 bohr^2
+	[ 0.5 0.5 0.137082 ] spread: 7.48656 bohr^2
+	[ 0.5 0.5 0.138633 ] spread: 7.93505 bohr^2
+	[ 0.5 1 0.188624 ] spread: 7.48813 bohr^2
+	[ 0.5 1 0.187832 ] spread: 7.39156 bohr^2
+	[ 0.5 1 0.190096 ] spread: 7.91239 bohr^2
+	[ 2.4253e-07 1 0.239363 ] spread: 7.3583 bohr^2
+	[ -3.76786e-07 1 0.240128 ] spread: 7.48302 bohr^2
+	[ -1.70752e-07 1 0.241571 ] spread: 7.84898 bohr^2
+	[ 4.76724e-08 0.5 0.291739 ] spread: 7.43144 bohr^2
+	[ -3.04505e-07 0.500001 0.290872 ] spread: 7.32874 bohr^2
+	[ -2.10471e-07 0.499999 0.293196 ] spread: 7.78882 bohr^2
+	[ 0.5 0.5 0.342556 ] spread: 7.39857 bohr^2
+	[ 0.5 0.5 0.343436 ] spread: 7.47789 bohr^2
+	[ 0.5 0.5 0.344762 ] spread: 7.82521 bohr^2
+	[ 0.5 1 0.395074 ] spread: 7.33926 bohr^2
+	[ 0.5 0.999998 0.394101 ] spread: 7.48197 bohr^2
+	[ 0.5 1 0.398896 ] spread: 7.95428 bohr^2
+Dumping 'wannier.mlwfBandContrib' ... done.
+Dumping 'wannier.mlwfCellMap' ... done.
+Dumping 'wannier.mlwfCellWeights'... done.
+Dumping 'wannier.mlwfH' ... done. Relative discarded imaginary part: 5.444182e-06
+Dumping 'wannier.mlwfW' ... done. Relative discarded imaginary part: 4.858085e-06
+End date and time: Wed Jul 15 13:50:01 2026  (Duration: 0-0:02:31.34)
+Done!
+
+PROFILER:                   Idag_DiagV_I    11.517863 +/-     0.000000 s,    1 calls,     11.517863 s total
+PROFILER:            matrix::diagonalize     0.019682 +/-     0.007964 s,    2 calls,      0.039365 s total
+PROFILER:                    matrix::set     0.000010 +/-     0.000031 s,   28 calls,      0.000278 s total
+PROFILER:                    matrix::svd     0.014424 +/-     0.015839 s,    5 calls,      0.072122 s total
+PROFILER:            orthoMatrix(matrix)     0.006933 +/-     0.000000 s,    1 calls,      0.006933 s total
+PROFILER:     RadialFunctionR::transform     0.002318 +/-     0.000930 s,   26 calls,      0.060277 s total
+PROFILER:                    reduceKmesh     0.004956 +/-     0.000000 s,    1 calls,      0.004956 s total
+PROFILER:     WannierMinimizer::axpyWfns     0.134341 +/-     0.000000 s,    1 calls,      0.134341 s total
+PROFILER:      WannierMinimizer::compute     0.032184 +/-     0.000000 s,    1 calls,      0.032184 s total
+PROFILER:   WannierMinimizerFD::getOmega     0.174555 +/-     0.000000 s,    1 calls,      0.174555 s total
+PROFILER:  WannierMinimizerFD::getOmegaI     0.087111 +/-     0.000000 s,    1 calls,      0.087111 s total
+PROFILER:                            Y*M     1.141870 +/-     0.000000 s,    1 calls,      1.141870 s total
+PROFILER:                          Y1^Y2     1.029082 +/-     0.181456 s,    4 calls,      4.116329 s total
+
+MEMUSAGE:                   ColumnBundle     0.668221 GB
+MEMUSAGE:        complexScalarFieldTilde     0.010428 GB
+MEMUSAGE:                    IndexArrays     0.040318 GB
+MEMUSAGE:                         matrix     0.112805 GB
+MEMUSAGE:                           misc     0.053334 GB
+MEMUSAGE:                     RealKernel     0.002617 GB
+MEMUSAGE:                    ScalarField     0.015643 GB
+MEMUSAGE:               ScalarFieldTilde     0.052297 GB
+MEMUSAGE:                          Total     0.885088 GB
+done. Relative discarded imaginary part: 6.865093e-07
+End date and time: Wed Jul 15 13:50:43 2026  (Duration: 0-0:02:30.86)
+Done!
+
+PROFILER:                   Idag_DiagV_I    11.640251 +/-     0.000000 s,    1 calls,     11.640251 s total
+PROFILER:            matrix::diagonalize     0.014960 +/-     0.004058 s,    2 calls,      0.029921 s total
+PROFILER:                    matrix::set     0.000010 +/-     0.000033 s,   28 calls,      0.000281 s total
+PROFILER:                    matrix::svd     0.012153 +/-     0.011810 s,    5 calls,      0.060766 s total
+PROFILER:            orthoMatrix(matrix)     0.006824 +/-     0.000000 s,    1 calls,      0.006824 s total
+PROFILER:     RadialFunctionR::transform     0.002516 +/-     0.001077 s,   26 calls,      0.065408 s total
+PROFILER:                    reduceKmesh     0.004193 +/-     0.000000 s,    1 calls,      0.004193 s total
+PROFILER:     WannierMinimizer::axpyWfns     0.136135 +/-     0.000000 s,    1 calls,      0.136135 s total
+PROFILER:      WannierMinimizer::compute     0.032582 +/-     0.000000 s,    1 calls,      0.032582 s total
+PROFILER:   WannierMinimizerFD::getOmega     0.177466 +/-     0.000000 s,    1 calls,      0.177466 s total
+PROFILER:  WannierMinimizerFD::getOmegaI     0.087413 +/-     0.000000 s,    1 calls,      0.087413 s total
+PROFILER:                            Y*M     1.143454 +/-     0.000000 s,    1 calls,      1.143454 s total
+PROFILER:                          Y1^Y2     1.030033 +/-     0.215491 s,    4 calls,      4.120132 s total
+
+MEMUSAGE:                   ColumnBundle     0.668221 GB
+MEMUSAGE:        complexScalarFieldTilde     0.010428 GB
+MEMUSAGE:                    IndexArrays     0.040318 GB
+MEMUSAGE:                         matrix     0.112805 GB
+MEMUSAGE:                           misc     0.053334 GB
+MEMUSAGE:                     RealKernel     0.002617 GB
+MEMUSAGE:                    ScalarField     0.015643 GB
+MEMUSAGE:               ScalarFieldTilde     0.052297 GB
+MEMUSAGE:                          Total     0.885088 GB

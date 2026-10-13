@@ -1,0 +1,13 @@
+include totalE.in
+include wannier_center.in
+
+wannier-initial-state totalE.$VAR
+wannier-dump-name wannier.$VAR
+wannier-minimize nIterations 24000 \
+    energyDiffThreshold 1e-8 \
+
+wannier \
+        innerWindow  -0.41 -0.054 \
+        outerWindow  -0.41 +0.400 \
+        saveMomenta no \
+        loadRotations yes
