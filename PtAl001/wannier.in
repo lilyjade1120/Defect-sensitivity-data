@@ -1,0 +1,17 @@
+include totalE.in
+include wannier-centers-pinned
+
+wannier \
+        innerWindow -0.6 -0.0\
+        outerWindow -1 1\
+        addAtomicOrbitals no \
+        pinAtomicOrbitals yes \
+        ignoreSemiCore yes \
+        projectionThresholds 0.01 0.85 \
+        saveMomenta yes \
+        loadRotations yes \
+	slabWeight -0.5 0.22 1 # set center at vacuum with width that drops to one atomic layer on surface
+
+wannier-initial-state totalE.$VAR
+wannier-dump-name wannier.$VAR
+wannier-minimize nIterations 0 nAlphaAdjustMax 20 # nIterations set to zero to dump slab weights

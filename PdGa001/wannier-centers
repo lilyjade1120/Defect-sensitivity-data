@@ -1,0 +1,280 @@
+wannier-center Pd 1 dxy
+wannier-center Pd 1 dyz
+wannier-center Pd 1 dxz
+wannier-center Pd 1 dx2-y2
+wannier-center Pd 1 dz2
+wannier-center Ga 1 s
+wannier-center Ga 1 px
+wannier-center Ga 1 py
+wannier-center Ga 1 pz
+
+wannier-center Pd 2 dxy
+wannier-center Pd 2 dyz
+wannier-center Pd 2 dxz
+wannier-center Pd 2 dx2-y2
+wannier-center Pd 2 dz2
+wannier-center Ga 2 s
+wannier-center Ga 2 px
+wannier-center Ga 2 py
+wannier-center Ga 2 pz
+
+wannier-center Pd 3 dxy
+wannier-center Pd 3 dyz
+wannier-center Pd 3 dxz
+wannier-center Pd 3 dx2-y2
+wannier-center Pd 3 dz2
+wannier-center Ga 3 s
+wannier-center Ga 3 px
+wannier-center Ga 3 py
+wannier-center Ga 3 pz
+
+wannier-center Pd 4 dxy
+wannier-center Pd 4 dyz
+wannier-center Pd 4 dxz
+wannier-center Pd 4 dx2-y2
+wannier-center Pd 4 dz2
+wannier-center Ga 4 s
+wannier-center Ga 4 px
+wannier-center Ga 4 py
+wannier-center Ga 4 pz
+
+wannier-center Pd 5 dxy
+wannier-center Pd 5 dyz
+wannier-center Pd 5 dxz
+wannier-center Pd 5 dx2-y2
+wannier-center Pd 5 dz2
+wannier-center Ga 5 s
+wannier-center Ga 5 px
+wannier-center Ga 5 py
+wannier-center Ga 5 pz
+
+wannier-center Pd 6 dxy
+wannier-center Pd 6 dyz
+wannier-center Pd 6 dxz
+wannier-center Pd 6 dx2-y2
+wannier-center Pd 6 dz2
+wannier-center Ga 6 s
+wannier-center Ga 6 px
+wannier-center Ga 6 py
+wannier-center Ga 6 pz
+
+wannier-center Pd 7 dxy
+wannier-center Pd 7 dyz
+wannier-center Pd 7 dxz
+wannier-center Pd 7 dx2-y2
+wannier-center Pd 7 dz2
+wannier-center Ga 7 s
+wannier-center Ga 7 px
+wannier-center Ga 7 py
+wannier-center Ga 7 pz
+
+wannier-center Pd 8 dxy
+wannier-center Pd 8 dyz
+wannier-center Pd 8 dxz
+wannier-center Pd 8 dx2-y2
+wannier-center Pd 8 dz2
+wannier-center Ga 8 s
+wannier-center Ga 8 px
+wannier-center Ga 8 py
+wannier-center Ga 8 pz
+
+wannier-center Pd 9 dxy
+wannier-center Pd 9 dyz
+wannier-center Pd 9 dxz
+wannier-center Pd 9 dx2-y2
+wannier-center Pd 9 dz2
+wannier-center Ga 9 s
+wannier-center Ga 9 px
+wannier-center Ga 9 py
+wannier-center Ga 9 pz
+
+wannier-center Pd 10 dxy
+wannier-center Pd 10 dyz
+wannier-center Pd 10 dxz
+wannier-center Pd 10 dx2-y2
+wannier-center Pd 10 dz2
+wannier-center Ga 10 s
+wannier-center Ga 10 px
+wannier-center Ga 10 py
+wannier-center Ga 10 pz
+
+wannier-center Pd 11 dxy
+wannier-center Pd 11 dyz
+wannier-center Pd 11 dxz
+wannier-center Pd 11 dx2-y2
+wannier-center Pd 11 dz2
+wannier-center Ga 11 s
+wannier-center Ga 11 px
+wannier-center Ga 11 py
+wannier-center Ga 11 pz
+
+wannier-center Pd 12 dxy
+wannier-center Pd 12 dyz
+wannier-center Pd 12 dxz
+wannier-center Pd 12 dx2-y2
+wannier-center Pd 12 dz2
+wannier-center Ga 12 s
+wannier-center Ga 12 px
+wannier-center Ga 12 py
+wannier-center Ga 12 pz
+
+wannier-center Pd 13 dxy
+wannier-center Pd 13 dyz
+wannier-center Pd 13 dxz
+wannier-center Pd 13 dx2-y2
+wannier-center Pd 13 dz2
+wannier-center Ga 13 s
+wannier-center Ga 13 px
+wannier-center Ga 13 py
+wannier-center Ga 13 pz
+
+wannier-center Pd 14 dxy
+wannier-center Pd 14 dyz
+wannier-center Pd 14 dxz
+wannier-center Pd 14 dx2-y2
+wannier-center Pd 14 dz2
+wannier-center Ga 14 s
+wannier-center Ga 14 px
+wannier-center Ga 14 py
+wannier-center Ga 14 pz
+
+wannier-center Pd 15 dxy
+wannier-center Pd 15 dyz
+wannier-center Pd 15 dxz
+wannier-center Pd 15 dx2-y2
+wannier-center Pd 15 dz2
+wannier-center Ga 15 s
+wannier-center Ga 15 px
+wannier-center Ga 15 py
+wannier-center Ga 15 pz
+
+wannier-center Pd 16 dxy
+wannier-center Pd 16 dyz
+wannier-center Pd 16 dxz
+wannier-center Pd 16 dx2-y2
+wannier-center Pd 16 dz2
+wannier-center Ga 16 s
+wannier-center Ga 16 px
+wannier-center Ga 16 py
+wannier-center Ga 16 pz
+
+wannier-center Pd 17 dxy
+wannier-center Pd 17 dyz
+wannier-center Pd 17 dxz
+wannier-center Pd 17 dx2-y2
+wannier-center Pd 17 dz2
+wannier-center Ga 17 s
+wannier-center Ga 17 px
+wannier-center Ga 17 py
+wannier-center Ga 17 pz
+
+wannier-center Pd 18 dxy
+wannier-center Pd 18 dyz
+wannier-center Pd 18 dxz
+wannier-center Pd 18 dx2-y2
+wannier-center Pd 18 dz2
+wannier-center Ga 18 s
+wannier-center Ga 18 px
+wannier-center Ga 18 py
+wannier-center Ga 18 pz
+
+wannier-center Pd 19 dxy
+wannier-center Pd 19 dyz
+wannier-center Pd 19 dxz
+wannier-center Pd 19 dx2-y2
+wannier-center Pd 19 dz2
+wannier-center Ga 19 s
+wannier-center Ga 19 px
+wannier-center Ga 19 py
+wannier-center Ga 19 pz
+
+wannier-center Pd 20 dxy
+wannier-center Pd 20 dyz
+wannier-center Pd 20 dxz
+wannier-center Pd 20 dx2-y2
+wannier-center Pd 20 dz2
+wannier-center Ga 20 s
+wannier-center Ga 20 px
+wannier-center Ga 20 py
+wannier-center Ga 20 pz
+
+wannier-center Pd 21 dxy
+wannier-center Pd 21 dyz
+wannier-center Pd 21 dxz
+wannier-center Pd 21 dx2-y2
+wannier-center Pd 21 dz2
+wannier-center Ga 21 s
+wannier-center Ga 21 px
+wannier-center Ga 21 py
+wannier-center Ga 21 pz
+
+wannier-center Pd 22 dxy
+wannier-center Pd 22 dyz
+wannier-center Pd 22 dxz
+wannier-center Pd 22 dx2-y2
+wannier-center Pd 22 dz2
+wannier-center Ga 22 s
+wannier-center Ga 22 px
+wannier-center Ga 22 py
+wannier-center Ga 22 pz
+
+wannier-center Pd 23 dxy
+wannier-center Pd 23 dyz
+wannier-center Pd 23 dxz
+wannier-center Pd 23 dx2-y2
+wannier-center Pd 23 dz2
+wannier-center Ga 23 s
+wannier-center Ga 23 px
+wannier-center Ga 23 py
+wannier-center Ga 23 pz
+
+wannier-center Pd 24 dxy
+wannier-center Pd 24 dyz
+wannier-center Pd 24 dxz
+wannier-center Pd 24 dx2-y2
+wannier-center Pd 24 dz2
+wannier-center Ga 24 s
+wannier-center Ga 24 px
+wannier-center Ga 24 py
+wannier-center Ga 24 pz
+
+wannier-center Pd 25 dxy
+wannier-center Pd 25 dyz
+wannier-center Pd 25 dxz
+wannier-center Pd 25 dx2-y2
+wannier-center Pd 25 dz2
+wannier-center Ga 25 s
+wannier-center Ga 25 px
+wannier-center Ga 25 py
+wannier-center Ga 25 pz
+
+wannier-center Pd 26 dxy
+wannier-center Pd 26 dyz
+wannier-center Pd 26 dxz
+wannier-center Pd 26 dx2-y2
+wannier-center Pd 26 dz2
+wannier-center Ga 26 s
+wannier-center Ga 26 px
+wannier-center Ga 26 py
+wannier-center Ga 26 pz
+
+wannier-center Pd 27 dxy
+wannier-center Pd 27 dyz
+wannier-center Pd 27 dxz
+wannier-center Pd 27 dx2-y2
+wannier-center Pd 27 dz2
+wannier-center Ga 27 s
+wannier-center Ga 27 px
+wannier-center Ga 27 py
+wannier-center Ga 27 pz
+
+wannier-center Pd 28 dxy
+wannier-center Pd 28 dyz
+wannier-center Pd 28 dxz
+wannier-center Pd 28 dx2-y2
+wannier-center Pd 28 dz2
+wannier-center Ga 28 s
+wannier-center Ga 28 px
+wannier-center Ga 28 py
+wannier-center Ga 28 pz
+

@@ -1,0 +1,20 @@
+coords-type cartesian
+ion-species GBRV/$ID_pbe.uspp
+include totalE.ionpos
+include totalE.lattice
+elec-cutoff 25 155
+elec-ex-corr gga-pbe
+elec-smearing Fermi .01
+latt-move-scale 1 1 0
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+ 
+electronic-minimize nIterations 400
+ionic-minimize nIterations 100
+converge-empty-states yes
+dump-name totalE.$VAR
+dump End State IonicPositions Lattice Velocities FermiVelocity ElecDensity EigStats
+
+dump Init Gvectors
+ 
+kpoint-folding 11 11 1
