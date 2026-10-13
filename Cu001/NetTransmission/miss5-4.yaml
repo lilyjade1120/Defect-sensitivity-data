@@ -1,0 +1,22 @@
+i_dir: 1
+dmu: 0.0 eV
+Nk: [256, 1, 1]
+n_tile: 1
+
+wannier:
+  prefix: ../..
+
+missing-atoms:
+  - delete: 
+      - [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, ]
+
+
+layered:
+  tol: 1.0E-5  # matrix element truncation tolerance
+
+contact:
+  eta: 1.0E-10  # imaginary offset (Lorentzian broadening)
+  tol: 1.0E-12  # surface Greens function convergence tolerance
+  n_iter: 100
+  verbose: no
+

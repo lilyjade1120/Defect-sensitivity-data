@@ -1,0 +1,66 @@
+wannier-center Cu 1 dxy
+wannier-center Cu 1 dyz
+wannier-center Cu 1 dxz
+wannier-center Cu 1 dx2-y2
+wannier-center Cu 1 dz2
+wannier-center Gaussian -0.000000 -0.000000 -17.323056 1 px 0.577350 Gaussian -0.000000 -0.000000 -17.323056 1 py 0.577350 Gaussian -0.000000 -0.000000 -17.323056 1 pz 0.577350 
+wannier-center Cu 2 dxy
+wannier-center Cu 2 dyz
+wannier-center Cu 2 dxz
+wannier-center Cu 2 dx2-y2
+wannier-center Cu 2 dz2
+wannier-center Gaussian 2.421303 2.421303 -13.959472 1 px 0.577350 Gaussian 2.421303 2.421303 -13.959472 1 py 0.577350 Gaussian 2.421303 2.421303 -13.959472 1 pz 0.577350 
+wannier-center Cu 3 dxy
+wannier-center Cu 3 dyz
+wannier-center Cu 3 dxz
+wannier-center Cu 3 dx2-y2
+wannier-center Cu 3 dz2
+wannier-center Gaussian -0.000000 -0.000000 -10.472907 1 px 0.577350 Gaussian -0.000000 -0.000000 -10.472907 1 py 0.577350 Gaussian -0.000000 -0.000000 -10.472907 1 pz 0.577350 
+wannier-center Cu 4 dxy
+wannier-center Cu 4 dyz
+wannier-center Cu 4 dxz
+wannier-center Cu 4 dx2-y2
+wannier-center Cu 4 dz2
+wannier-center Gaussian 2.421303 2.421303 -6.971946 1 px 0.577350 Gaussian 2.421303 2.421303 -6.971946 1 py 0.577350 Gaussian 2.421303 2.421303 -6.971946 1 pz 0.577350 
+wannier-center Cu 5 dxy
+wannier-center Cu 5 dyz
+wannier-center Cu 5 dxz
+wannier-center Cu 5 dx2-y2
+wannier-center Cu 5 dz2
+wannier-center Gaussian -0.000000 -0.000000 -3.483067 1 px 0.577350 Gaussian -0.000000 -0.000000 -3.483067 1 py 0.577350 Gaussian -0.000000 -0.000000 -3.483067 1 pz 0.577350 
+wannier-center Cu 6 dxy
+wannier-center Cu 6 dyz
+wannier-center Cu 6 dxz
+wannier-center Cu 6 dx2-y2
+wannier-center Cu 6 dz2
+wannier-center Gaussian 2.421303 2.421303 0.000000 1 px 0.577350 Gaussian 2.421303 2.421303 0.000000 1 py 0.577350 Gaussian 2.421303 2.421303 0.000000 1 pz 0.577350 
+wannier-center Cu 7 dxy
+wannier-center Cu 7 dyz
+wannier-center Cu 7 dxz
+wannier-center Cu 7 dx2-y2
+wannier-center Cu 7 dz2
+wannier-center Gaussian -0.000000 -0.000000 3.508418 1 px 0.577350 Gaussian -0.000000 -0.000000 3.508418 1 py 0.577350 Gaussian -0.000000 -0.000000 3.508418 1 pz 0.577350 
+wannier-center Cu 8 dxy
+wannier-center Cu 8 dyz
+wannier-center Cu 8 dxz
+wannier-center Cu 8 dx2-y2
+wannier-center Cu 8 dz2
+wannier-center Gaussian 2.421303 2.421303 7.011570 1 px 0.577350 Gaussian 2.421303 2.421303 7.011570 1 py 0.577350 Gaussian 2.421303 2.421303 7.011570 1 pz 0.577350 
+wannier-center Cu 9 dxy
+wannier-center Cu 9 dyz
+wannier-center Cu 9 dxz
+wannier-center Cu 9 dx2-y2
+wannier-center Cu 9 dz2
+wannier-center Gaussian -0.000000 -0.000000 10.519010 1 px 0.577350 Gaussian -0.000000 -0.000000 10.519010 1 py 0.577350 Gaussian -0.000000 -0.000000 10.519010 1 pz 0.577350 
+wannier-center Cu 10 dxy
+wannier-center Cu 10 dyz
+wannier-center Cu 10 dxz
+wannier-center Cu 10 dx2-y2
+wannier-center Cu 10 dz2
+wannier-center Gaussian 2.421303 2.421303 14.014622 1 px 0.577350 Gaussian 2.421303 2.421303 14.014622 1 py 0.577350 Gaussian 2.421303 2.421303 14.014622 1 pz 0.577350 
+wannier-center Cu 11 dxy
+wannier-center Cu 11 dyz
+wannier-center Cu 11 dxz
+wannier-center Cu 11 dx2-y2
+wannier-center Cu 11 dz2
+wannier-center Gaussian -0.000000 -0.000000 17.382208 1 px 0.577350 Gaussian -0.000000 -0.000000 17.382208 1 py 0.577350 Gaussian -0.000000 -0.000000 17.382208 1 pz 0.577350 
