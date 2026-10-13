@@ -1,0 +1,15 @@
+i_dir: 0
+dmu: ${dmu} eV
+Nk: [1, 256, 1]
+
+wannier:
+  prefix: ..
+
+layered:
+  tol: 1.0E-5
+
+contact:
+  eta: 1.0E-10
+  tol: 1.0E-12
+  n_iter: 100
+  verbose: no

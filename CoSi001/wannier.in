@@ -1,0 +1,14 @@
+include ../totalE-nc.in 
+
+wannier \ 
+	innerWindow -0.7 -0.1 \ 
+	outerWindow -0.7 0.05 \ 
+	saveMomenta yes 
+	loadRotations yes 
+	 
+wannier-initial-state totalE-nc.$VAR 
+wannier-dump-name Wannier/wannier.$VAR 
+wannier-minimize nIterations 20000
+
+include wannier-centers
+

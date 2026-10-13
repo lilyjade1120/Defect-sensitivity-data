@@ -1,0 +1,23 @@
+i_dir: 0
+dmu: -0.1 eV
+Nk: [1, 256, 1]
+n_tile: 1
+
+wannier:
+  prefix: ../..
+
+# Delete one top-surface atom's d orbitals and all adjacent void centers
+missing-atoms:
+  - delete:
+    - [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 93, 95, ]
+    
+
+layered:
+  tol: 1.0E-5  # matrix element truncation tolerance
+
+contact:
+  eta: 1.0E-8  # imaginary offset (Lorentzian broadening)
+  tol: 1.0E-12  # surface Greens function convergence tolerance
+  n_iter: 100
+  verbose: no
+
