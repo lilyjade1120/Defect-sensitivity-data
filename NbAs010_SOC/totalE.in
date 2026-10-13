@@ -1,0 +1,22 @@
+coords-type cartesian
+include totalE.ionpos
+include totalE.lattice
+latt-move-scale 1 1 0
+kpoint-folding 16 6 1
+
+elec-cutoff 40 200 # from Sushant's SOC calculation
+elec-smearing Fermi 0.01
+spintype spin-orbit
+ion-species $ID.nc-rel-pbe.upf
+
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+
+electronic-scf nIterations 400
+elec-n-bands 0 1.1
+converge-empty-states yes
+
+dump-name totalE.$VAR
+dump Init Symmetries Kpoints Gvectors 
+dump End State IonicPositions Lattice Velocities FermiVelocity ElecDensity EigStats Vscloc
+

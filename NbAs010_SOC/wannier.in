@@ -1,0 +1,16 @@
+include totalE.in
+include wannier_center.in
+
+wannier \
+       	addAtomicOrbitals no \
+        pinAtomicOrbitals no \
+        ignoreSemiCore no \
+        projectionThresholds 0.01 0.95 \
+	innerWindow -0.2055 -0.1255 \
+        outerWindow -1 1 \
+	saveMomenta no \
+        loadRotations yes \
+
+wannier-initial-state totalE.$VAR
+wannier-dump-name wannier.$VAR
+wannier-minimize nIterations 11000 nAlphaAdjustMax 20
