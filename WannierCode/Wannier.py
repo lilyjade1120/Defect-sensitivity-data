@@ -298,42 +298,6 @@ class Wannier:
         # --- annotate mu or VBM as applicable:
         plt.axhline(0, linestyle='dashed', color='black', linewidth=1)
 
-    def make_tight_binding(self, structure: Atoms, cutoff: float = 0) -> tuple[Wannier, list[list[int]]]:
-        """Make a tight-binding model for `structure` using self as the bulk."""
-        # Construct supercell mapping:
-        supercell = Supercell(self.atoms, structure, cutoff, torch.zeros(3, device = rc.device)) # HACK ALERT!!!
-        # TODO: make center settable by user
-        cell_map_sup, atom_cell_maps = supercell.map_cells(self.cell_map)
-        
-        # Map centers to atoms:
-        pos = torch.from_numpy(self.atoms.get_scaled_positions(wrap=False)).to(rc.device)
-        dpos = pos[:, None, :] - self.centers
-        dpos -= torch.round(dpos)  # minimum image convention
-        # TODO: handle or raise error if centers are unit cells away from atoms
-        distances = (dpos @ self.lattice.Rbasis.T).norm(dim=-1)
-        i_closest_atom = distances.argmin(dim=0)  # closest atom index for each center
-        center_indices = [
-            torch.where(i_closest_atom == i_atom)[0] for i_atom in range(len(pos))
-        ]
-        
-        # Construct supercell Hamiltonian:
-        Hsup, basis_sup_slices = supercell.map_hamiltonian(
-            self.Hwannier, center_indices, cell_map_sup, atom_cell_maps
-        )
-        
-        # Wrap it within another Wannier object:
-        wannier_sup = copy.copy(self)
-        wannier_sup.lattice = Lattice(
-            Rbasis=structure.cell[:].T * Unit.MAP["Angstrom"], periodic=structure.get_pbc()
-        )
-        wannier_sup.atoms = structure
-        wannier_sup.cell_map = cell_map_sup.to(torch.float64)
-        wannier_sup.Hwannier = Hsup
-        wannier_sup.matrix_elements_wannier.clear()
-        # TODO: better handle other wannier_sup entries that may be invalid 
-        return wannier_sup, basis_sup_slices
-
-
 def main() -> None:
     """Test Wannier read and interpolation with band structure."""
     import argparse
@@ -347,35 +311,12 @@ def main() -> None:
     rc.init()
     parser = argparse.ArgumentParser()
     parser.add_argument("prefix", type=str, help="Wannier prefix")
-    parser.add_argument("--structure", type=str, help="Structure for tight-binding model", default="")
-    parser.add_argument("--pbc", type=int, nargs=3, help="Super-structure preiodicity", default=(1, 1, 1))
-    parser.add_argument("--cutoff", type=float, help="cutoff", default=0.0)
     args = parser.parse_args()
     
     plt.figure()
     wannier = Wannier(prefix=args.prefix)
     wannier.plot_bandstructure()
     plt.savefig('bulk.png')
-
-    if args.structure:
-        plt.figure()
-        structure = ase.io.read(args.structure)
-        structure.set_pbc([bool(periodic_i) for periodic_i in args.pbc])
-        wannier_sup, basis_sup_slices = wannier.make_tight_binding(structure, args.cutoff)
-        log.info(f"Basis slices by atom: {basis_sup_slices}")
-        wannier_sup.prefix = os.path.dirname(args.structure)
-        wannier_sup.plot_bandstructure()
-        DFThandle = Line2D([], [], color = 'k', ls = 'solid', label = 'DFT')
-        TBhandle = Line2D([], [], color = 'r', ls = ':', label = 'Tight Binding')
-        handles = [TBhandle]
-        if wannier_sup.DFTexists:
-            handles.append(DFThandle)
-        plt.legend(handles = handles, loc = 'upper right')
-        plt.savefig('supercell.png')
-        plt.savefig('supercell.pdf')
-    plt.show()
-    rc.free()
-
 
 if __name__ == "__main__":
     main()
